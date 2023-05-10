@@ -1,0 +1,5 @@
+1. no subi, subiu instruction in the instruction sets, need to delete.
+2. Input 'jump_address26' of PC from IFetch is also a 'jal' instruction; Not mark in IFetch 'To PC'.
+3. ALU also need PC_address because 'beq' and 'bne' need to calculate the next PC_address(PC = PC + 4 + BranchAddr).
+4. 'ori' and 'xori' need ZeroExtImm.
+5. Does ALU need a state to stand for nothing to do?
