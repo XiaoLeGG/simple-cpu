@@ -21,12 +21,20 @@
 
 
 module IFetch(
-input [31:0]address_i,
-input clk,
-output reg instruction_o
+    input [31:0]address_i,
+    input clk,
+    output reg instruction_o
 );
 
-always@(posedge clk)
+IMem ram(
+    .wea(0),
+    .dina(32'h0000_0000),
+    .clka(clk),
+    .addra(address_i[15:2]),
+    .douta(instruction_o)
+);
+
+always @(posedge clk)
 begin
     
 end

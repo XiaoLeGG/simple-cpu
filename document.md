@@ -19,28 +19,28 @@
 
 #### Bus
 
-| Name                 | Type   | Width  | From/To                                  | Description                     |
-| -------------------- | ------ | ------ | ---------------------------------------- | ------------------------------- |
-| clk23                | wire   | 1      | **IPCore** ipclk                         | 23MHz.                          |
-| pc_output_address_o  | wire   | [31:0] |                                          | Receive output from PC.         |
-| ifetch_instruction_o | wire   | [31:0] |                                          | Receive output from IFetch.     |
-| controller_RegDst    | wire   | 1      |                                          | Receive output from Controller. |
-| controller_Branch    | wire   | [1:0]  |                                          | Receive output from Controller. |
-| controller_MemRead   | wire   | 1      |                                          | Receive output from Controller. |
-| controller_MemtoReg  | wire   | 1      |                                          | Receive output from Controller. |
-| controller_ALUOp     | wire   | [3:0]  |                                          | Receive output from Controller. |
-| controller_MemWrite  | wire   | 1      |                                          | Receive output from Controller. |
-| controller_ALUSrc    | wire   | 1      |                                          | Receive output from Controller. |
-| controller_RegWrite  | wire   | 1      |                                          | Receive output from Controller. |
-| controller_Jr        | wire   | 1      |                                          | Receive output from Controller. |
-| controller_Jal       | wire   | 1      |                                          | Receive output from Controller. |
-| idecoder_read_data_1 | wire   | [31:0] |                                          | Receive output from IDecoder.   |
-| idecoder_read_data_2 | wire   | [31:0] |                                          | Receive output from IDecoder.   |
-| alu_zero_s           | wire   | 1      |                                          | Receive output from Alu.        |
-| alu_result           | wire   | [31:0] |                                          | Receive output from Alu.        |
-| dmemory_read_data    | wire   | [31:0] |                                          | Receive output from DMemory.    |
-| sign_extend_data32   | wire   | [31:0] |                                          | Receive output from Sign_Extend |
-| controller_clk23_o   | output | 1      | **Module** PC, IFetch, IDecoder, DMemory |                                 |
+| Name                 | Type | Width  | From/To          | Description                     |
+| -------------------- | ---- | ------ | ---------------- | ------------------------------- |
+| clk23                | wire | 1      | **IPCore** ipclk | 23MHz.                          |
+| pc_output_address_o  | wire | [31:0] |                  | Receive output from PC.         |
+| ifetch_instruction_o | wire | [31:0] |                  | Receive output from IFetch.     |
+| controller_RegDst    | wire | 1      |                  | Receive output from Controller. |
+| controller_Branch    | wire | [1:0]  |                  | Receive output from Controller. |
+| controller_MemRead   | wire | 1      |                  | Receive output from Controller. |
+| controller_MemtoReg  | wire | 1      |                  | Receive output from Controller. |
+| controller_ALUOp     | wire | [3:0]  |                  | Receive output from Controller. |
+| controller_MemWrite  | wire | 1      |                  | Receive output from Controller. |
+| controller_ALUSrc    | wire | 1      |                  | Receive output from Controller. |
+| controller_RegWrite  | wire | 1      |                  | Receive output from Controller. |
+| controller_Jr        | wire | 1      |                  | Receive output from Controller. |
+| controller_Jal       | wire | 1      |                  | Receive output from Controller. |
+| idecoder_read_data_1 | wire | [31:0] |                  | Receive output from IDecoder.   |
+| idecoder_read_data_2 | wire | [31:0] |                  | Receive output from IDecoder.   |
+| alu_zero_s           | wire | 1      |                  | Receive output from Alu.        |
+| alu_result           | wire | [31:0] |                  | Receive output from Alu.        |
+| dmemory_read_data    | wire | [31:0] |                  | Receive output from DMemory.    |
+| sign_extend_data32   | wire | [31:0] |                  | Receive output from Sign_Extend |
+|                      |      |        |                  |                                 |
 
 ### PC
 
@@ -52,15 +52,13 @@
 
 | Name           | Type   | Width  | From/To                      | Description                                                  |
 | -------------- | ------ | ------ | ---------------------------- | ------------------------------------------------------------ |
-| address_i      | input  | [31:0] | **Self**                     | PC register, pointing to the instruction address.            |
+| rst            | input  | 1      | **Module** Top               | Reset signal                                                 |
 | clk            | input  | 1      | **Module** Top               | The clock from IP cores. It is triggered at negative edge.   |
 | branch_s       | input  | [1:0]  | **Module** Controller        | Controller the multiplexer to select next PC address.        |
-| jump_s         | input  | 1      | **Module** Controller        | A directly jump signal.                                      |
 | zero_s         | input  | 1      | **Module** Alu               | Signal the compare result of Alu.                            |
 | block_s        | input  | 1      | **Module**                   | The block signal.                                            |
 | jump_address26 | input  | [25:0] | **Module** IFetch            | The 26 bit jump address. Used by instruction j.              |
 | jump_address32 | input  | [31:0] | **Module** Alu               | The 32 bit jump address. Used by instruction jr, beq and bnq. |
-| jal            | input  | 1      | **Module** Controller        | The signal of jal.                                           |
 | address_o      | output | [31:0] | **Module** IFetch, IDecoder. | The new instruction address.                                 |
 | PC_reg         | reg    | [31:0] |                              | The register PC.                                             |
 
@@ -132,6 +130,7 @@
 
 | Name        | Type       | Width  | From/To                 | Description                                                |
 | ----------- | ---------- | ------ | ----------------------- | ---------------------------------------------------------- |
+| rst         | input      | 1      | **Module** Top          | Reset signal.                                              |
 | clk         | input      | 1      | **Module** Top          | The clock from IP cores. It is triggered at positive edge. |
 | ins25_21    | input      | [4:0]  | **Module** IFetch       | Part of instruction for read register.                     |
 | ins20_16    | input      | [4:0]  | **Module** IFetch       | Part of instruction for read register.                     |

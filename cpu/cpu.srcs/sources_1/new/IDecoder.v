@@ -21,27 +21,27 @@
 
 
 module IDecoder(
-input clk,
-input [4:0]ins25_21,
-input [4:0]ins20_16,
-input [4:0]ins15_11,
-input RegDst,
-input RegWrite,
-input Jr,
-input Jal,
-input MemtoReg,
-input [31:0]PC_address,
-input [31:0]alu_data,
-input [31:0]mem_data,
-output reg [31:0]read_data_1,
-output reg [31:0]read_data_2
+    input rst,
+    input clk,
+    input [4:0]ins25_21,
+    input [4:0]ins20_16,
+    input [4:0]ins15_11,
+    input RegDst,
+    input RegWrite,
+    input Jr,
+    input Jal,
+    input MemtoReg,
+    input [31:0]PC_address,
+    input [31:0]alu_data,
+    input [31:0]mem_data,
+    output reg [31:0]read_data_1,
+    output reg [31:0]read_data_2
 );
 reg [31:0]register[0:31];
 reg [4:0]write_register;
 
 always@(*)
 begin
-    register[0] = 32'b0; // $zero needs to be 0 at any time.
     if (Jr == 1'b1) begin // jr instruction read $ra
         read_data_1 = register[31];
         read_data_2 = register[0];
@@ -64,10 +64,42 @@ begin
     //select the write register
 end
 
-always@(posedge clk)
+always@(posedge clk, negedge rst)
 begin
-    if (RegWrite == 1'b1) begin
-        register[write_register] = MemtoReg ? mem_data : alu_data;
+    register[0] = 32'h0000_0000;
+    if (~rst) begin
+//        register[1] = 32'h0000_0000;
+//        register[2] = 32'h0000_0000;
+//        register[3] = 32'h0000_0000;
+//        register[4] = 32'h0000_0000;
+//        register[5] = 32'h0000_0000;
+//        register[6] = 32'h0000_0000;
+//        register[7] = 32'h0000_0000;
+//        register[8] = 32'h0000_0000;
+//        register[9] = 32'h0000_0000;
+//        register[10] = 32'h0000_0000;
+//        register[11] = 32'h0000_0000;
+//        register[12] = 32'h0000_0000;
+//        register[13] = 32'h0000_0000;
+//        register[14] = 32'h0000_0000;
+//        register[15] = 32'h0000_0000;
+//        register[16] = 32'h0000_0000;
+//        register[17] = 32'h0000_0000;
+//        register[18] = 32'h0000_0000;
+//        register[19] = 32'h0000_0000;
+//        register[20] = 32'h0000_0000;
+//        register[21] = 32'h0000_0000;
+    end else begin
+        if (RegWrite == 1'b1) begin
+            if (write_register == 5'b00000) begin
+                register[write_register] = 32'h0000_0000;
+            end
+            else begin
+                register[write_register] = MemtoReg ? mem_data : alu_data;
+            end
+        end else begin
+            register[write_register] = register[write_register];
+        end
     end
 end
 endmodule

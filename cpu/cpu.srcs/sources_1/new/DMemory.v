@@ -21,11 +21,14 @@
 
 
 module DMemory(
-input clk,
-input MemRead,
-input MemWrite,
-input [31:0]address_i,
-input [31:0]write_data,
-output reg [31:0]read_data
+    input clk,
+    input MemRead,
+    input MemWrite,
+    input [31:0]address_i,
+    input [31:0]write_data,
+    output reg [31:0]read_data
 );
+
+
+
 endmodule
