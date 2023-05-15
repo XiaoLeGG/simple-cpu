@@ -47,6 +47,7 @@ module Top(
     wire controller_Jr;
     wire controller_Jal;
     wire controller_HwtoReg;
+    wire controller_block_ins;
     wire [31:0] idecoder_read_data_1;
     wire [31:0] idecoder_read_data_2;
     wire alu_zero_s;
@@ -69,7 +70,6 @@ module Top(
     assign rst = hard_ware_rst;
     wire block_s;
     
-    wire hwassistant_hw_block_s;
     wire [31:0] hwassistant_read_data;
     
     assign block_led = block_s;
@@ -79,14 +79,12 @@ module Top(
     .clk100(raw_clock),
     .instruction(ifetch_instruction_o),
     .data_switch(data_switch),
-    .confirm_button(confirm_button),
     .systemcall_argument_1(idecoder_systemcall_argument_1),
     .systemcall_argument_2(idecoder_systemcall_argument_2),
     .seg_en(seg_en),
     .seg_out0(seg_out0),
     .seg_out1(seg_out1),
     .result_led(result_led),
-    .hw_block_s(hwassistant_hw_block_s),
     .read_data(hwassistant_read_data)
     );
     
@@ -96,7 +94,9 @@ module Top(
     .clk(clk23),
     .branch_s(controller_Branch),
     .zero_s(alu_zero_s),
+    .block_ins(controller_block_ins),
     .block_s(block_s),
+    .confirm_button(confirm_button),
     .jump_address26(ifetch_instruction_o[25:0]),
     .jump_address32(alu_result),
     .address_o(pc_output_address_o));
@@ -111,7 +111,7 @@ module Top(
     .opcode(ifetch_instruction_o[31:26]),
     .funct(ifetch_instruction_o[5:0]),
     .systemcall_argument_1(idecoder_systemcall_argument_1),
-    .hw_block_s(hwassistant_hw_block_s),
+    .block_ins(controller_block_ins),
     .block_s(block_s),
     .RegDst(controller_RegDst),
     .Branch(controller_Branch),

@@ -24,7 +24,7 @@ module Controller(
     input [5:0] opcode, // instruction[31:26]
     input [5:0] funct, // instruction[5:0]
     input [31:0] systemcall_argument_1,
-    input hw_block_s,
+    output reg block_ins,
     output reg block_s,
     output reg RegDst, // 0: ins20_16; 1: ins15_11
     output reg [1:0] Branch, // 0: no branch; 1: j || jal; 2: beq || bne; 3: jr

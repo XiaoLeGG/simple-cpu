@@ -25,7 +25,9 @@ module PC(
     input clk,
     input [1:0]branch_s, // branch type
     input zero_s, // no need to jump; 1: need to jump (bne || beq)
-    input block_s, // block signal fro IO
+    input block_s, // block signal for IO
+    input block_ins, // block signal for instruction
+    input confirm_button,
     input [25:0]jump_address26, // address get from instruction j || jal
     input [31:0]jump_address32, // address get from jr || beq || bne
     output reg [31:0]address_o // output address
@@ -33,11 +35,19 @@ module PC(
 
 reg [31:0] PC_reg = 32'h0000_0000;
 reg [31:0] next_address;
-reg [31:0] address0, address1;
+reg confirm;
+
+always @(negedge confirm_button) begin
+    if (block_ins) begin
+        confirm = 1'b1;
+    end else begin
+        confirm = 1'b0;
+    end
+end
 
 always@(*)
 begin
-    if (block_s) begin
+    if (block_s || (block_ins && ~confirm)) begin
         next_address = PC_reg;
     end
     else begin
@@ -68,10 +78,12 @@ begin
     if (~rst) begin
         address_o = 32'h0000_0000;
         PC_reg = 32'h0000_0000;
+        confirm = 1'b0;
     end
     else begin
         address_o = next_address;
         PC_reg = next_address;
+        confirm = 1'b0;
     end
 end
 
