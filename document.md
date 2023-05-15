@@ -70,11 +70,11 @@
 
 ####  Bus
 
-| Name          | Type   | Width  | From/To                                      | Description                                                |
-| ------------- | ------ | ------ | -------------------------------------------- | ---------------------------------------------------------- |
-| address_i     | input  | [31:0] | **Module** PC                                | The instruction address.                                   |
-| clk           | input  | 1      | **Module** Top                               | The clock from IP cores. It is triggered at positive edge. |
-| instruction_o | output | [31:0] | **Module** Controller, IDecoder, Sign_Extend | The fetched instruction.                                   |
+| Name          | Type   | Width  | From/To                                          | Description                                                |
+| ------------- | ------ | ------ | ------------------------------------------------ | ---------------------------------------------------------- |
+| address_i     | input  | [31:0] | **Module** PC                                    | The instruction address.                                   |
+| clk           | input  | 1      | **Module** Top                                   | The clock from IP cores. It is triggered at positive edge. |
+| instruction_o | output | [31:0] | **Module** Controller, IDecoder, Sign_Extend, PC | The fetched instruction.                                   |
 
 ### Controller
 
@@ -108,8 +108,8 @@
 | 2     | sra, srav                  |
 | 3     | add, addi, lw, sw, jr, jal |
 | 4     | addu, addiu                |
-| 5     | sub, subi                  |
-| 6     | subu, subiu                |
+| 5     | sub                        |
+| 6     | subu                       |
 | 7     | and, andi                  |
 | 8     | or, ori                    |
 | 9     | xor, xori                  |

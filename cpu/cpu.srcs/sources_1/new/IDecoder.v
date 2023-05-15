@@ -68,6 +68,8 @@ always@(posedge clk, negedge rst)
 begin
     register[0] = 32'h0000_0000;
     if (~rst) begin
+        register[28] = 32'h1000_8000;
+        register[29] = 32'h7fff_effc;
 //        register[1] = 32'h0000_0000;
 //        register[2] = 32'h0000_0000;
 //        register[3] = 32'h0000_0000;

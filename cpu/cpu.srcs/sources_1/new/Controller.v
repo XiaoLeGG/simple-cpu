@@ -21,18 +21,18 @@
 
 
 module Controller(
-input [5:0]opcode, // instruction[31:26]
-input [5:0]funct, // instruction[5:0]
-output reg RegDst, // 0: ins20_16; 1: ins15_11
-output reg [1:0]Branch, // 0: no branch; 1: j || jal; 2: beq || bne; 3: jr
-output reg MemRead, // 0: No read from Memory; 1: Read from Memory.
-output reg MemtoReg, // 0: write data from ALU; 1: write data from Memory
-output reg [3:0]ALUOp, // according to document.md
-output reg MemWrite, // 0: no write Memory; 1: write Memory
-output reg ALUSrc, // 0: get data from Register; 1: get data from Sign-Extend
-output reg RegWrite, // 0: no wirte Register; 1: write Register
-output reg Jr, // 0: not a jr instruction
-output reg Jal // 0: not a jal instruction
+    input [5:0]opcode, // instruction[31:26]
+    input [5:0]funct, // instruction[5:0]
+    output reg RegDst, // 0: ins20_16; 1: ins15_11
+    output reg [1:0]Branch, // 0: no branch; 1: j || jal; 2: beq || bne; 3: jr
+    output reg MemRead, // 0: No read from Memory; 1: Read from Memory.
+    output reg MemtoReg, // 0: write data from ALU; 1: write data from Memory
+    output reg [3:0]ALUOp, // according to document.md
+    output reg MemWrite, // 0: no write Memory; 1: write Memory
+    output reg ALUSrc, // 0: get data from Register; 1: get data from Sign-Extend
+    output reg RegWrite, // 0: no wirte Register; 1: write Register
+    output reg Jr, // 0: not a jr instruction
+    output reg Jal // 0: not a jal instruction
 );
 always@(*)
 begin
