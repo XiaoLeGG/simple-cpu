@@ -73,6 +73,8 @@ begin
             Branch = 2'b00;
         end
     endcase
+
+    block_ins = (opcode = 6'b111111 && funct == 6'b111111) && (systemcall_argument_1 == 32'h0000_0000 || systemcall_argument_1 = 32'h0000_0001);
     
     // lbu || lhu || ll || lw
     MemRead = (opcode == 6'h24 || opcode == 6'h25 || opcode == 6'h30 || opcode == 6'h23);
