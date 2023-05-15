@@ -24,12 +24,14 @@ module DMemory(
     input clk,
     input MemRead,
     input MemWrite,
-    input [31:0]address_i,
-    input [31:0]write_data,
-    output reg [31:0]read_data
+    input [31:0] address_i,
+    input [31:0] write_data,
+    output [31:0] read_data
 );
     wire neg_clk;
-    assign neg_clk = !clk;
+    assign neg_clk = ~clk;
+    
+    
     
     RAM ram(
     .clka(neg_clk),

@@ -21,30 +21,38 @@
 
 
 module Controller(
-    input [5:0]opcode, // instruction[31:26]
-    input [5:0]funct, // instruction[5:0]
+    input [5:0] opcode, // instruction[31:26]
+    input [5:0] funct, // instruction[5:0]
+    input [31:0] systemcall_argument_1,
+    input hw_block_s,
+    output reg block_s,
     output reg RegDst, // 0: ins20_16; 1: ins15_11
-    output reg [1:0]Branch, // 0: no branch; 1: j || jal; 2: beq || bne; 3: jr
+    output reg [1:0] Branch, // 0: no branch; 1: j || jal; 2: beq || bne; 3: jr
     output reg MemRead, // 0: No read from Memory; 1: Read from Memory.
     output reg MemtoReg, // 0: write data from ALU; 1: write data from Memory
-    output reg [3:0]ALUOp, // according to document.md
+    output reg HwtoReg,
+    output reg [3:0] ALUOp, // according to document.md
     output reg MemWrite, // 0: no write Memory; 1: write Memory
     output reg ALUSrc, // 0: get data from Register; 1: get data from Sign-Extend
     output reg RegWrite, // 0: no wirte Register; 1: write Register
     output reg Jr, // 0: not a jr instruction
     output reg Jal // 0: not a jal instruction
 );
+
+
+
 always@(*)
 begin
+    // add || addu || and || nor
+    // || or || slt || sltu || sll
+    // || srl || sub || subu || sllv
+    // || srlv || sra || srav || xor
     RegDst = (opcode == 6'h00) &&
              (funct == 6'h20 || funct == 6'h21 || funct == 6'h24 || funct == 6'h27
              || funct == 6'h25 || funct == 6'h2a || funct == 6'h2b || funct == 6'h00
              || funct == 6'h02 || funct == 6'h22 || funct == 6'h23 || funct == 6'h04
              || funct == 6'h06 || funct == 6'h03 || funct == 6'h07 || funct == 6'h26);
-    // add || addu || and || nor
-    // || or || slt || sltu || sll
-    // || srl || sub || subu || sllv
-    // || srlv || sra || srav || xor
+    
     
     case(opcode)
         6'h02, 6'h03: begin // j || jal
@@ -66,32 +74,28 @@ begin
         end
     endcase
     
+    // lbu || lhu || ll || lw
     MemRead = (opcode == 6'h24 || opcode == 6'h25 || opcode == 6'h30 || opcode == 6'h23);
-    // lbu || lhu || ll || lw
     
+    
+    // lbu || lhu || ll || lw
     MemtoReg = (opcode == 6'h24 || opcode == 6'h25 || opcode == 6'h30 || opcode == 6'h23);
-    // lbu || lhu || ll || lw
+    HwtoReg = (opcode == 6'b111111 && funct == 6'b111111) && (systemcall_argument_1 == 32'h0000_0000);
     
-    MemWrite = (opcode == 6'h28 || opcode == 6'h38 || opcode == 6'h29 || opcode == 6'h2b);
+    
     // sb || sc || sh || sw
+    MemWrite = (opcode == 6'h28 || opcode == 6'h38 || opcode == 6'h29 || opcode == 6'h2b);
     
+    
+     // addi || addiu || lbu || lhu
+    // || ll || lw || slti || sltiu
+    // || sb || sc || sh || sw
+    // || andi || ori || xori || lui
     ALUSrc = (opcode == 6'h08 || opcode == 6'h09 || opcode == 6'h24 || opcode == 6'h25
               || opcode == 6'h30 || opcode == 6'h23 || opcode == 6'h0a || opcode == 6'h0b
               || opcode == 6'h28 || opcode == 6'h38 || opcode == 6'h29 || opcode == 6'h2b
               || opcode == 6'h0c || opcode == 6'h0d || opcode == 6'h0e || opcode == 6'h0f);
-    // addi || addiu || lbu || lhu
-    // || ll || lw || slti || sltiu
-    // || sb || sc || sh || sw
-    // || andi || ori || xori || lui
-    
-    RegWrite = ((opcode == 6'h00 && (funct == 6'h20 || funct == 6'h21 || funct == 6'h24
-                || funct == 6'h27 || funct == 6'h25 || funct == 6'h2a || funct == 6'h2b
-                || funct == 6'h00 || funct == 6'h02 || funct == 6'h22 || funct == 6'h23
-                || funct == 6'h04 || funct == 6'h06 || funct == 6'h03 || funct == 6'h07
-                || funct == 6'h26)) || (opcode == 6'h08 || opcode == 6'h09 || opcode == 6'h0c
-                || opcode == 6'h03 || opcode == 6'h24 || opcode == 6'h25 || opcode == 6'h30
-                || opcode == 6'h0f || opcode == 6'h23 || opcode == 6'h0d || opcode == 6'h0a
-                || opcode == 6'h0b));
+
     // add || addu || and
     // || nor || or || slt || sltu
     // || sll || srl || sub || subu
@@ -99,7 +103,17 @@ begin
     // || xor || addi || addiu || andi
     // || jal || lbu || lhu || ll
     // || lui || lw || ori || slti
-    // || sltiu
+    // || sltiu || systemcall with v0 = 0
+    RegWrite = ((opcode == 6'h00 && (funct == 6'h20 || funct == 6'h21 || funct == 6'h24
+                || funct == 6'h27 || funct == 6'h25 || funct == 6'h2a || funct == 6'h2b
+                || funct == 6'h00 || funct == 6'h02 || funct == 6'h22 || funct == 6'h23
+                || funct == 6'h04 || funct == 6'h06 || funct == 6'h03 || funct == 6'h07
+                || funct == 6'h26)) || (opcode == 6'h08 || opcode == 6'h09 || opcode == 6'h0c
+                || opcode == 6'h03 || opcode == 6'h24 || opcode == 6'h25 || opcode == 6'h30
+                || opcode == 6'h0f || opcode == 6'h23 || opcode == 6'h0d || opcode == 6'h0a
+                || opcode == 6'h0b))
+                || (opcode == 6'b111111 && funct == 6'b111111 && systemcall_argument_1 == 32'h0000_0000);
+    
                 
     Jr = (opcode == 6'h00 && funct == 6'h08); // jr
     

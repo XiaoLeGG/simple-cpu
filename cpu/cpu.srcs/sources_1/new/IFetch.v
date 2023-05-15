@@ -21,17 +21,20 @@
 
 
 module IFetch(
-    input [31:0]address_i,
+    input [31:0] address_i,
     input clk,
-    output reg instruction_o
+    output [31:0] instruction_o
 );
 
+wire [31:0] fetch_ins;
+assign instruction_o = fetch_ins;
+
 IMem ram(
-    .wea(0),
+    .wea(1'b0),
     .dina(32'h0000_0000),
     .clka(clk),
     .addra(address_i[15:2]),
-    .douta(instruction_o)
+    .douta(fetch_ins)
 );
 
 endmodule
