@@ -28,12 +28,11 @@ reg [15:0]pre16;
 always@(*)
 begin
     if (ins15_0[15:15] == 1'b1) begin
-        pre16 = 16'hffff;
+        data32 = {16'hffff, ins15_0};
     end
     else begin
-        pre16 = 16'h0000;
+        data32 = {16'h0000, ins15_0};
     end
-    data32 = {pre16, ins15_0};
 end
 
 endmodule

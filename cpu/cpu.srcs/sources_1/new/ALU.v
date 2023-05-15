@@ -25,8 +25,8 @@ module ALU(
     input [31:0] read_data_2,
     input [31:0] sign_extended_data,
     input [3:0] ALUOp,
-    input [31:0] PC_address,
     input ALUSrc, // 0: get data from Register; 1: get data from Sign-Extend
+    input [31:0] PC_address,
     output reg zero_s, // compare result signal
     output reg [31:0] result
 );
@@ -69,11 +69,11 @@ begin
             zero_s = 1'b0;
         end
         4'h8: begin // or, ori
-            result = read_data_1 | (ALUSrc ? sign_extended_data : read_data_2);
+            result = read_data_1 | (ALUSrc ? {16'h0000, sign_extended_data[15:0]} : read_data_2);
             zero_s = 1'b0;
         end
         4'h9: begin // xor, xori
-            result = read_data_1 ^ (ALUSrc ? sign_extended_data : read_data_2);
+            result = read_data_1 ^ (ALUSrc ? {16'h0000, sign_extended_data[15:0]} : read_data_2);
             zero_s = 1'b0;
         end
         4'ha: begin // nor

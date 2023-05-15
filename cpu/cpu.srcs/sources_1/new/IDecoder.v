@@ -64,33 +64,20 @@ begin
     //select the write register
 end
 
+integer m;
+
 always@(posedge clk, negedge rst)
 begin
     register[0] = 32'h0000_0000;
     if (~rst) begin
         register[28] = 32'h1000_8000;
         register[29] = 32'h7fff_effc;
-//        register[1] = 32'h0000_0000;
-//        register[2] = 32'h0000_0000;
-//        register[3] = 32'h0000_0000;
-//        register[4] = 32'h0000_0000;
-//        register[5] = 32'h0000_0000;
-//        register[6] = 32'h0000_0000;
-//        register[7] = 32'h0000_0000;
-//        register[8] = 32'h0000_0000;
-//        register[9] = 32'h0000_0000;
-//        register[10] = 32'h0000_0000;
-//        register[11] = 32'h0000_0000;
-//        register[12] = 32'h0000_0000;
-//        register[13] = 32'h0000_0000;
-//        register[14] = 32'h0000_0000;
-//        register[15] = 32'h0000_0000;
-//        register[16] = 32'h0000_0000;
-//        register[17] = 32'h0000_0000;
-//        register[18] = 32'h0000_0000;
-//        register[19] = 32'h0000_0000;
-//        register[20] = 32'h0000_0000;
-//        register[21] = 32'h0000_0000;
+        
+        for (m = 0; m < 32; m = m + 1) begin
+            if (m != 28 && m != 29) begin
+                register[m] = 32'h0000_0000;
+            end
+        end
     end else begin
         if (RegWrite == 1'b1) begin
             if (write_register == 5'b00000) begin

@@ -21,7 +21,8 @@
 
 
 module Top(
-    input raw_clock
+    input raw_clock,
+    input hard_ware_rst
     );
     wire clk23;
     wire [31:0] pc_output_address_o;
@@ -44,6 +45,7 @@ module Top(
     wire [31:0] sign_extend_data32;
     
     wire rst;
+    assign rst = hard_ware_rst;
     wire block_s;
     
     cpuclk cpu_clock(.clk_in1(raw_clock), .clk_out1(clk23));
@@ -96,16 +98,29 @@ module Top(
     .read_data_2(idecoder_read_data_2)
     );
     
-    Alu alu(
+    ALU alu(
     .read_data_1(idecoder_read_data_1),
     .read_data_2(idecoder_read_data_2),
     .sign_extended_data(sign_extend_data32),
     .ALUOp(controller_ALUOp),
     .ALUSrc(controller_ALUSrc),
+    .PC_address(pc_output_address_o),
     .zero_s(alu_zero_s),
     .result(alu_result)
     );
     
+    DMemory dmemory(
+    .clk(clk23),
+    .MemRead(controller_MemRead),
+    .MemWrite(controller_MemWrite),
+    .address_i(alu_result),
+    .write_data(idecoder_read_data_2),
+    .read_data(dmemory_read_data)
+    );
     
+    Sign_Extend sign_extend(
+    .ins15_0(ifetch_instruction_o[15:0]),
+    .data32(sign_extend_data32)
+    );
     
 endmodule

@@ -28,7 +28,16 @@ module DMemory(
     input [31:0]write_data,
     output reg [31:0]read_data
 );
-
+    wire neg_clk;
+    assign neg_clk = !clk;
+    
+    RAM ram(
+    .clka(neg_clk),
+    .wea(MemWrite),
+    .addra(address_i[15:2]),
+    .dina(write_data),
+    .douta(read_data)
+    );
 
 
 endmodule

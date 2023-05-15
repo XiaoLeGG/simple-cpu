@@ -26,12 +26,12 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.cache/wt [current_project]
 set_property parent.project_path D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.xpr [current_project]
-set_property XPM_LIBRARIES XPM_MEMORY [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo d:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet d:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem.xci
+read_ip -quiet D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem.xci
 set_property used_in_implementation false [get_files -all d:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -84,32 +84,32 @@ write_checkpoint -force -noxdef IMem.dcp
 create_report "IMem_synth_1_synth_report_utilization_0" "report_utilization -file IMem_utilization_synth.rpt -pb IMem_utilization_synth.pb"
 
 if { [catch {
-  file copy -force D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.runs/IMem_synth_1/IMem.dcp d:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem.dcp
+  file copy -force D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.runs/IMem_synth_1/IMem.dcp D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub d:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_stub.v
+  write_verilog -force -mode synth_stub D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub d:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_stub.vhdl
+  write_vhdl -force -mode synth_stub D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim d:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_sim_netlist.v
+  write_verilog -force -mode funcsim D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim d:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -119,32 +119,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.runs/IMem_synth_1/IMem.dcp d:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem.dcp
+  file copy -force D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.runs/IMem_synth_1/IMem.dcp D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.runs/IMem_synth_1/IMem_stub.v d:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_stub.v
+  file rename -force D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.runs/IMem_synth_1/IMem_stub.v D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.runs/IMem_synth_1/IMem_stub.vhdl d:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_stub.vhdl
+  file rename -force D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.runs/IMem_synth_1/IMem_stub.vhdl D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.runs/IMem_synth_1/IMem_sim_netlist.v d:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_sim_netlist.v
+  file rename -force D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.runs/IMem_synth_1/IMem_sim_netlist.v D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.runs/IMem_synth_1/IMem_sim_netlist.vhdl d:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_sim_netlist.vhdl
+  file rename -force D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.runs/IMem_synth_1/IMem_sim_netlist.vhdl D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -153,12 +153,12 @@ if { [catch {
 
 if {[file isdir D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.ip_user_files/ip/IMem]} {
   catch { 
-    file copy -force d:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_stub.v D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.ip_user_files/ip/IMem
+    file copy -force D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_stub.v D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.ip_user_files/ip/IMem
   }
 }
 
 if {[file isdir D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.ip_user_files/ip/IMem]} {
   catch { 
-    file copy -force d:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_stub.vhdl D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.ip_user_files/ip/IMem
+    file copy -force D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_stub.vhdl D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.ip_user_files/ip/IMem
   }
 }

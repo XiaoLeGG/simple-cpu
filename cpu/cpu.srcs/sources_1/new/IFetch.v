@@ -34,9 +34,4 @@ IMem ram(
     .douta(instruction_o)
 );
 
-always @(posedge clk)
-begin
-    
-end
-
 endmodule
