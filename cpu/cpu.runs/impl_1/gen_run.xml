@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1684085356">
-  <File Type="PWROPT-DCP" Name="Top_pwropt.dcp"/>
   <File Type="PA-TCL" Name="Top.tcl"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="Top_postplace_pwropt.dcp"/>
+  <File Type="PWROPT-DCP" Name="Top_pwropt.dcp"/>
   <File Type="REPORTS-TCL" Name="Top_reports.tcl"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Top_postplace_pwropt.dcp"/>
   <File Type="BG-DRC" Name="Top.drc"/>
-  <File Type="OPT-DCP" Name="Top_opt.dcp"/>
   <File Type="OPT-HWDEF" Name="Top.hwdef"/>
+  <File Type="OPT-DCP" Name="Top_opt.dcp"/>
   <File Type="PLACE-DCP" Name="Top_placed.dcp"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="Top_incremental_reuse_pre_placed.rpt"/>
   <File Type="PHYSOPT-DCP" Name="Top_physopt.dcp"/>

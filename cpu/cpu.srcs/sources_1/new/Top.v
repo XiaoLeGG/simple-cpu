@@ -30,7 +30,10 @@ module Top(
     output result_led,
     output wire[7:0] seg_en,
     output wire[7:0] seg_out0,
-    output wire[7:0] seg_out1
+    output wire[7:0] seg_out1,
+    output [31:0] ifetch_instruction_o_2,
+    output clk23_o,
+    output [31:0] pc_address_o
 );
     
     wire clk23;
@@ -58,8 +61,9 @@ module Top(
     wire [31:0] idecoder_systemcall_argument_1;
     wire [31:0] idecoder_systemcall_argument_2;
     
-//    assign clk23_o = clk23;
-//    assign ifetch_instruction_o_2 = ifetch_instruction_o;
+    assign clk23_o = clk23;
+    assign ifetch_instruction_o_2 = ifetch_instruction_o;
+    assign pc_address_o = pc_output_address_o;
 //    assign alu_result_o = alu_result;
 //    assign alu_zero_s_o = alu_zero_s;
 //    assign read_data1_o = idecoder_read_data_1;

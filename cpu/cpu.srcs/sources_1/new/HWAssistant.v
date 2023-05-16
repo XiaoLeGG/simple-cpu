@@ -27,16 +27,26 @@ module HWAssistant(
     input [7:0] data_switch,
     input [31:0] systemcall_argument_1,
     input [31:0] systemcall_argument_2,
-    output reg [7:0] seg_een,
-    output reg [7:0] seg_out0,
-    output reg [7:0] seg_out1,
+    output [7:0] seg_en,
+    output [7:0] seg_out0,
+    output [7:0] seg_out1,
     output reg result_led,
     output reg [31:0] read_data
     );
     
-    reg has_pressed;
+    reg [31:0] display_number;
+    reg [1:0] led_type;
+
+    refresh_seg_led rsl(
+        .binary(display_number),
+        .clk(clk100),
+        .rst_n(rst),
+        .seg_en(seg_en),
+        .seg_out0(seg_out0),
+        .seg_out1(seg_out1)
+    );
     
-    always @(*) begin
+    always @(instruction, systemcall_argument_1, systemcall_argument_2, data_switch) begin
         if (instruction == 32'hffff_ffff) begin
             case (systemcall_argument_1)
                 32'h0000_0000: begin // $v0 = 0, read data is signed.
@@ -45,8 +55,22 @@ module HWAssistant(
                 32'h0000_0001: begin // $v0 = 1. read data is unsigne
                     read_data = {24'h000000, data_switch};
                 end
+                32'h0000_0002: begin
+                    if (systemcall_argument_2[31:31] == 1'b1) begin
+                        display_number = ~(systemcall_argument_2 - 1'b1);
+                    end
+                    else begin
+                        display_number = systemcall_argument_2;
+                    end
+                end
+                32'h0000_0003: begin // unsigned number
+                    display_number = systemcall_argument_2;
+                end
+                32'h0000_0004: begin
+                    led_type = systemcall_argument_2[1:0];
+                end
                 default: begin
-                    read_data = {(data_switch[7] ? 24'hffffff : 24'h000000), data_switch};
+                    //read_data = {(data_switch[7] ? 24'hffffff : 24'h000000), data_switch};
                 end
             endcase
         end else begin

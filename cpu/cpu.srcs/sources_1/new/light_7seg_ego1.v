@@ -2,7 +2,7 @@
 
 module light_7seg_ego1
 (
-    input [4:0] number,
+    input [3:0] number,
     output reg [7:0] seg_out
 );
 
