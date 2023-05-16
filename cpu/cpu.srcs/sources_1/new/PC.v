@@ -35,19 +35,24 @@ module PC(
 
 reg [31:0] PC_reg = 32'h0000_0000;
 reg [31:0] next_address;
-reg confirm;
+reg [31:0] confirm;
+reg [31:0] confirm_value;
 
-always @(negedge confirm_button) begin
-    if (block_ins) begin
-        confirm = 1'b1;
+always @(negedge confirm_button, negedge rst) begin
+    if (~rst) begin
+        confirm = 32'hffff_ffff;
     end else begin
-        confirm = 1'b0;
+        if (block_ins) begin
+            confirm = confirm_value;
+        end else begin
+            confirm = 32'hffff_ffff;
+        end
     end
 end
 
 always@(*)
 begin
-    if (block_s || (block_ins && ~confirm)) begin
+    if (block_s || (block_ins && confirm != confirm_value)) begin
         next_address = PC_reg;
     end
     else begin
@@ -78,12 +83,20 @@ begin
     if (~rst) begin
         address_o = 32'h0000_0000;
         PC_reg = 32'h0000_0000;
-        confirm = 1'b0;
+        confirm_value = 32'h0000_0000;
     end
     else begin
+        if (PC_reg != next_address) begin
+            if (confirm_value == 32'h7fff_ffff) begin
+                confirm_value = 32'h0000_0000;
+            end else begin
+                confirm_value = confirm_value + 1;
+            end
+        end else begin
+            confirm_value = confirm_value;
+        end
         address_o = next_address;
         PC_reg = next_address;
-        confirm = 1'b0;
     end
 end
 
