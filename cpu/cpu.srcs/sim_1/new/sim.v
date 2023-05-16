@@ -35,7 +35,8 @@ module sim(
     wire [31:0] ifetch_instruction_o_2;
     wire clk23_o;
     wire [31:0] pc_address_o;
-    Top top(clk, rst, data_switch, confirm_button, block_led, error_led, result_led, seg_en, seg_out0, seg_out1, ifetch_instruction_o_2, clk23_o, pc_address_o);
+    wire [31:0] bcd_o;
+    Top top(clk, rst, data_switch, confirm_button, block_led, error_led, result_led, seg_en, seg_out0, seg_out1);
     
     always #5 clk = ~clk;
     
@@ -43,6 +44,7 @@ module sim(
        clk = 1'b0;
        rst = 1'b0;
        data_switch = 8'b1111_0000;
+
        #5000 rst = 1'b1;
        #1000 confirm_button = 1'b1;
        #10 confirm_button = 1'b0;

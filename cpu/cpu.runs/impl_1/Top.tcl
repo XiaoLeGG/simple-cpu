@@ -60,20 +60,28 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param xicom.use_bs_reader 1
+  set_param synth.incrementalSynthesisCache D:/csw/Desk/CS202/CPU/simple-cpu/cpu/.Xil/Vivado-4148-LAPTOP-IFRFTT91/incrSyn
   create_project -in_memory -part xc7a35tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir D:/workspace-verilog/cs202-cpu/cpu/cpu.cache/wt [current_project]
-  set_property parent.project_path D:/workspace-verilog/cs202-cpu/cpu/cpu.xpr [current_project]
-  set_property ip_output_repo D:/workspace-verilog/cs202-cpu/cpu/cpu.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.cache/wt [current_project]
+  set_property parent.project_path D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.xpr [current_project]
+  set_property ip_output_repo D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/Top.dcp
-  read_xdc D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/constrs_1/new/ego1.xdc
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  add_files -quiet D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.runs/synth_1/Top.dcp
+  read_ip -quiet D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/RAM/RAM.xci
+  read_ip -quiet D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem.xci
+  read_ip -quiet D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/cpuclk/cpuclk.xci
+  read_xdc D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/constrs_1/new/ego1.xdc
   link_design -top Top -part xc7a35tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]
@@ -143,6 +151,25 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
+  unset ACTIVE_STEP 
+}
+
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  catch { write_mem_info -force Top.mmi }
+  write_bitstream -force Top.bit 
+  catch {write_debug_probes -quiet -force Top}
+  catch {file copy -force Top.ltx debug_nets.ltx}
+  close_msg_db -file write_bitstream.pb
+} RESULT]
+if {$rc} {
+  step_failed write_bitstream
+  return -code error $RESULT
+} else {
+  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 

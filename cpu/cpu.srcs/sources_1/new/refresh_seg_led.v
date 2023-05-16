@@ -34,9 +34,10 @@ parameter period = 200000;
 reg [31:0] cnt;
 reg clkout;
 
-reg [3:0] number;
-reg [2:0] digit;
 
+reg [3:0] number;
+
+reg [2:0] digit;
 
 always @(posedge clk, negedge rst_n) 
 begin

@@ -1,0 +1,231 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Wed May 17 00:25:26 2023
+| Host         : LAPTOP-IFRFTT91 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
+| Design       : Top
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |   161 |
+| Unused register locations in slices containing registers |   507 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              49 |           22 |
+| No           | No                    | Yes                    |              68 |           31 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |             992 |          894 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++---------------------------+---------------------------------+----------------------------------+------------------+----------------+
+|        Clock Signal       |          Enable Signal          |         Set/Reset Signal         | Slice Load Count | Bel Load Count |
++---------------------------+---------------------------------+----------------------------------+------------------+----------------+
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[8][31][0]   | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[31][0]_0[0] | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[25][31][0]  | idecoder/register[1][14]_i_2_n_1 |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[9][31][0]   | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[11][31][0]  | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[23][31][0]  | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[30][31][0]  | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[16][31][0]  | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[24][31][0]  | idecoder/register[1][14]_i_2_n_1 |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[22][31][0]  | idecoder/register[1][14]_i_2_n_1 |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[27][31][0]  | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[17][31][0]  | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[21][31][0]  | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[15][31][0]  | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[29][31][0]  | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[26][31][0]  | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[28][31][0]  | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[18][31][0]  | idecoder/register_reg[31][0]_0   |                1 |              1 |
+| ~cpu_clock/inst/clk_out1  |                                 | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[21][31][0]  | idecoder/register[1][14]_i_2_n_1 |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[14][31][0]  | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[27][31][0]  | idecoder/register[1][14]_i_2_n_1 |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[10][31][0]  | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[13][31][0]  | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[19][31][0]  | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[12][31][0]  | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[24][31][0]  | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[20][31][0]  | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[22][31][0]  | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[23][31][0]  | idecoder/register[1][14]_i_2_n_1 |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[26][31][0]  | idecoder/register[1][14]_i_2_n_1 |                1 |              1 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[25][31][0]  | idecoder/register_reg[31][0]_0   |                1 |              1 |
+|  cpu_clock/inst/clk_out1  |                                 |                                  |                2 |              2 |
+| ~cpu_clock/inst/clk_out1  |                                 |                                  |                1 |              2 |
+|  hwass/rsl/clkout_reg_n_1 |                                 | hwass/rsl/sel0[3]                |                2 |              3 |
+|  ifetch/E[0]              |                                 |                                  |                1 |              4 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[26][31][0]  | idecoder/register[8][6]_i_1_n_1  |                5 |              5 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[21][31][0]  | idecoder/register[8][6]_i_1_n_1  |                5 |              5 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[18][31][0]  | idecoder/register[8][6]_i_1_n_1  |                5 |              5 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[16][31][0]  | idecoder/register[8][6]_i_1_n_1  |                5 |              5 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[17][31][0]  | idecoder/register[8][6]_i_1_n_1  |                5 |              5 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[20][31][0]  | idecoder/register[8][6]_i_1_n_1  |                5 |              5 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[9][31][0]   | idecoder/register[8][6]_i_1_n_1  |                5 |              5 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[22][31][0]  | idecoder/register[8][6]_i_1_n_1  |                5 |              5 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[27][31][0]  | idecoder/register[8][6]_i_1_n_1  |                5 |              5 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[10][31][0]  | idecoder/register[8][6]_i_1_n_1  |                5 |              5 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[12][31][0]  | idecoder/register[8][6]_i_1_n_1  |                5 |              5 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[15][31][0]  | idecoder/register[8][6]_i_1_n_1  |                5 |              5 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[13][31][0]  | idecoder/register[8][6]_i_1_n_1  |                5 |              5 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[25][31][0]  | idecoder/register[8][6]_i_1_n_1  |                4 |              5 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[23][31][0]  | idecoder/register[8][6]_i_1_n_1  |                5 |              5 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[24][31][0]  | idecoder/register[8][6]_i_1_n_1  |                5 |              5 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[19][31][0]  | idecoder/register[8][6]_i_1_n_1  |                5 |              5 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[14][31][0]  | idecoder/register[8][6]_i_1_n_1  |                4 |              5 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[11][31][0]  | idecoder/register[8][6]_i_1_n_1  |                5 |              5 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[18][31][0]  | idecoder/register[8][25]_i_1_n_1 |                5 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[18][31][0]  | idecoder/register[8][12]_i_1_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[13][31][0]  | idecoder/register[8][18]_i_1_n_1 |                5 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[19][31][0]  | idecoder/register[8][25]_i_1_n_1 |                5 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[19][31][0]  | idecoder/register[8][12]_i_1_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[21][31][0]  | idecoder/register[8][31]_i_2_n_1 |                5 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[21][31][0]  | idecoder/register[8][25]_i_1_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[21][31][0]  | idecoder/register[8][12]_i_1_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[22][31][0]  | idecoder/register[8][31]_i_2_n_1 |                5 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[22][31][0]  | idecoder/register[8][25]_i_1_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[22][31][0]  | idecoder/register[8][12]_i_1_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[23][31][0]  | idecoder/register[8][31]_i_2_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[23][31][0]  | idecoder/register[8][25]_i_1_n_1 |                5 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[23][31][0]  | idecoder/register[8][12]_i_1_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[24][31][0]  | idecoder/register[8][31]_i_2_n_1 |                5 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[24][31][0]  | idecoder/register[8][25]_i_1_n_1 |                5 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[24][31][0]  | idecoder/register[8][12]_i_1_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[20][31][0]  | idecoder/register[8][25]_i_1_n_1 |                5 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[20][31][0]  | idecoder/register[8][12]_i_1_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[26][31][0]  | idecoder/register[8][31]_i_2_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[26][31][0]  | idecoder/register[8][18]_i_1_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[26][31][0]  | idecoder/register[8][12]_i_1_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[25][31][0]  | idecoder/register[8][31]_i_2_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[25][31][0]  | idecoder/register[8][18]_i_1_n_1 |                5 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[25][31][0]  | idecoder/register[8][12]_i_1_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[13][31][0]  | idecoder/register[8][25]_i_1_n_1 |                5 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[27][31][0]  | idecoder/register[8][31]_i_2_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[27][31][0]  | idecoder/register[8][18]_i_1_n_1 |                5 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[27][31][0]  | idecoder/register[8][12]_i_1_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[28][31][0]  | idecoder/register[8][6]_i_1_n_1  |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[11][31][0]  | idecoder/register[8][31]_i_2_n_1 |                5 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[11][31][0]  | idecoder/register[8][18]_i_1_n_1 |                5 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[14][31][0]  | idecoder/register[8][25]_i_1_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[12][31][0]  | idecoder/register[8][31]_i_2_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[12][31][0]  | idecoder/register[8][18]_i_1_n_1 |                5 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[10][31][0]  | idecoder/register[8][31]_i_2_n_1 |                5 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[10][31][0]  | idecoder/register[8][18]_i_1_n_1 |                5 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[15][31][0]  | idecoder/register[8][18]_i_1_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[15][31][0]  | idecoder/register[8][25]_i_1_n_1 |                5 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[16][31][0]  | idecoder/register[8][18]_i_1_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[16][31][0]  | idecoder/register[8][25]_i_1_n_1 |                5 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[8][31][0]   | idecoder/register[8][31]_i_2_n_1 |                5 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[14][31][0]  | idecoder/register[8][18]_i_1_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[8][31][0]   | idecoder/register[8][6]_i_1_n_1  |                5 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[8][31][0]   | idecoder/register[8][12]_i_1_n_1 |                5 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[9][31][0]   | idecoder/register[8][31]_i_2_n_1 |                4 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[9][31][0]   | idecoder/register[8][18]_i_1_n_1 |                5 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[17][31][0]  | idecoder/register[8][25]_i_1_n_1 |                4 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[17][31][0]  | idecoder/register[8][12]_i_1_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[8][31][0]   | idecoder/register[8][18]_i_1_n_1 |                6 |              6 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[27][31][0]  | idecoder/register[8][25]_i_1_n_1 |                6 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[20][31][0]  | idecoder/register[8][18]_i_1_n_1 |                6 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[12][31][0]  | idecoder/register[8][25]_i_1_n_1 |                6 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[20][31][0]  | idecoder/register[8][31]_i_2_n_1 |                6 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[12][31][0]  | idecoder/register[8][12]_i_1_n_1 |                7 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[19][31][0]  | idecoder/register[8][18]_i_1_n_1 |                7 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[29][31][0]  | idecoder/register[8][6]_i_1_n_1  |                5 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[11][31][0]  | idecoder/register[8][12]_i_1_n_1 |                6 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[10][31][0]  | idecoder/register[8][25]_i_1_n_1 |                7 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[19][31][0]  | idecoder/register[8][31]_i_2_n_1 |                6 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[10][31][0]  | idecoder/register[8][12]_i_1_n_1 |                7 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[13][31][0]  | idecoder/register[8][12]_i_1_n_1 |                7 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[15][31][0]  | idecoder/register[8][31]_i_2_n_1 |                6 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[24][31][0]  | idecoder/register[8][18]_i_1_n_1 |                6 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[17][31][0]  | idecoder/register[8][31]_i_2_n_1 |                6 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[13][31][0]  | idecoder/register[8][31]_i_2_n_1 |                7 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[15][31][0]  | idecoder/register[8][12]_i_1_n_1 |                7 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[18][31][0]  | idecoder/register[8][18]_i_1_n_1 |                7 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[16][31][0]  | idecoder/register[8][31]_i_2_n_1 |                7 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[26][31][0]  | idecoder/register[8][25]_i_1_n_1 |                6 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[11][31][0]  | idecoder/register[8][25]_i_1_n_1 |                6 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[18][31][0]  | idecoder/register[8][31]_i_2_n_1 |                5 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[16][31][0]  | idecoder/register[8][12]_i_1_n_1 |                7 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[17][31][0]  | idecoder/register[8][18]_i_1_n_1 |                7 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[14][31][0]  | idecoder/register[8][31]_i_2_n_1 |                7 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[22][31][0]  | idecoder/register[8][18]_i_1_n_1 |                5 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[8][31][0]   | idecoder/register[8][25]_i_1_n_1 |                6 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[23][31][0]  | idecoder/register[8][18]_i_1_n_1 |                6 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[25][31][0]  | idecoder/register[8][25]_i_1_n_1 |                6 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[9][31][0]   | idecoder/register[8][25]_i_1_n_1 |                6 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[9][31][0]   | idecoder/register[8][12]_i_1_n_1 |                7 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[31][0]_0[0] | idecoder/register[8][6]_i_1_n_1  |                5 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[30][31][0]  | idecoder/register[8][6]_i_1_n_1  |                6 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[21][31][0]  | idecoder/register[8][18]_i_1_n_1 |                6 |              7 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[14][31][0]  | idecoder/register[8][12]_i_1_n_1 |                7 |              7 |
+|  idecoder/E[0]            |                                 |                                  |                6 |              9 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[7][31][0]   | idecoder/register[1][14]_i_2_n_1 |               10 |             14 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[3][31][0]   | idecoder/register[1][14]_i_2_n_1 |               14 |             15 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[4][31][0]   | idecoder/register[1][14]_i_2_n_1 |               12 |             15 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[1][31][0]   | idecoder/register[1][14]_i_2_n_1 |               13 |             15 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[6][31][0]   | idecoder/register[1][14]_i_2_n_1 |               12 |             15 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[5][31][0]   | idecoder/register[1][14]_i_2_n_1 |               13 |             15 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[4][31][0]   | idecoder/register_reg[31][0]_0   |               12 |             17 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[5][31][0]   | idecoder/register_reg[31][0]_0   |               15 |             17 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[6][31][0]   | idecoder/register_reg[31][0]_0   |               15 |             17 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[3][31][0]   | idecoder/register_reg[31][0]_0   |               15 |             17 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[1][31][0]   | idecoder/register_reg[31][0]_0   |               15 |             17 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[7][31][0]   | idecoder/register_reg[31][0]_0   |               17 |             18 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[31][0]_0[0] | idecoder/register_reg[28][25]_0  |               21 |             24 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[29][31][0]  | idecoder/register_reg[28][25]_0  |               23 |             24 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[30][31][0]  | idecoder/register_reg[28][25]_0  |               22 |             24 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[28][31][0]  | idecoder/register_reg[28][25]_0  |               23 |             25 |
+| ~cpu_clock/inst/clk_out1  |                                 | idecoder/register_reg[28][25]_0  |               14 |             31 |
+|  n_0_433_BUFG             |                                 |                                  |               12 |             32 |
+|  cpu_clock/inst/clk_out1  | ifetch/register_reg[2][31][0]   | idecoder/register[1][14]_i_2_n_1 |               25 |             32 |
+|  raw_clock_IBUF_BUFG      |                                 | hwass/rsl/sel0[3]                |               14 |             33 |
++---------------------------+---------------------------------+----------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                    32 |
+| 2      |                     2 |
+| 3      |                     1 |
+| 4      |                     1 |
+| 5      |                    19 |
+| 6      |                    50 |
+| 7      |                    35 |
+| 9      |                     1 |
+| 14     |                     1 |
+| 15     |                     5 |
+| 16+    |                    14 |
++--------+-----------------------+
+
+
