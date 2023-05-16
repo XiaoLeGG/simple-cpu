@@ -57,47 +57,26 @@ begin
     end
 end
 
-reg [31:0] bcd_temp;
-reg [3:0] bcd_digit;
 reg [31:0] bcd_out;
-reg [4:0] counter;
 
 integer i;
  
-always @(*) begin
+always @(binary) begin
 	bcd_out = 32'h0000_0000;
 	
 	for(i = 31; i >= 0; i = i - 1) begin
-		if (bcd_out[3:0] >= 4'd5) bcd_out[3:0 = bcd_out[3:0 + 4'd3;
+		if (bcd_out[3:0] >= 4'd5) bcd_out[3:0] = bcd_out[3:0] + 4'd3;
 		if (bcd_out[7:4] >= 4'd5) bcd_out[7:4] = bcd_out[7:4] + 4'd3;
-		if (hundreds >= 4'd5)	hundreds = hundreds + 4'd3;
-		hundreds = {hundreds[0],tens[3]};
-		tens	 = {tens[2:0],ones[3]};
-		ones	 = {ones[2:0],bin_in[i]};
+        if (bcd_out[11:8] >= 4'd5) bcd_out[11:8] = bcd_out[11:8] + 4'd3;
+        if (bcd_out[15:12] >= 4'd5) bcd_out[15:12] = bcd_out[15:12] + 4'd3;
+        if (bcd_out[19:16] >= 4'd5) bcd_out[19:16] = bcd_out[19:16] + 4'd3;
+        if (bcd_out[23:20] >= 4'd5) bcd_out[23:20] = bcd_out[23:20] + 4'd3;
+        if (bcd_out[27:24] >= 4'd5) bcd_out[27:24] = bcd_out[27:24] + 4'd3;
+        if (bcd_out[31:28] >= 4'd5) bcd_out[31:28] = bcd_out[31:28] + 4'd3;
+        bcd_out = bcd_out << 1;
+        bcd_out[0] = binary[i];
 	end
 end
-  
-//always @ (binary) begin
-//    bcd_temp <= binary;
-//    bcd_out <= 0;
-//    counter <= 0;
-    
-//    for (counter = 0; counter < 32; counter = counter + 1) begin
-//      if (bcd_temp[3:0] > 4) bcd_temp <= bcd_temp + 3;
-//      if (bcd_temp[7:4] > 4) bcd_temp <= bcd_temp + 48;
-//      if (bcd_temp[11:8] > 4) bcd_temp <= bcd_temp + 768;
-//      if (bcd_temp[15:12] > 4) bcd_temp <= bcd_temp + 12288;
-//      if (bcd_temp[19:16] > 4) bcd_temp <= bcd_temp + 196608;
-//      if (bcd_temp[23:20] > 4) bcd_temp <= bcd_temp + 3145728;
-//      if (bcd_temp[27:24] > 4) bcd_temp <= bcd_temp + 50331648;
-//      if (bcd_temp[31:28] > 4) bcd_temp <= bcd_temp + 805306368;
-//    end
-    
-//    for (counter = 0; counter < 8; counter = counter + 1) begin
-//      bcd_digit <= bcd_temp[counter*4 +: 4];
-//      bcd_out[counter*4 +: 4] <= bcd_digit;
-//    end
-//end
 
 always @(posedge clkout, negedge rst_n)
 begin
