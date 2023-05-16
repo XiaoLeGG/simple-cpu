@@ -39,10 +39,10 @@ module HWAssistant(
     always @(*) begin
         if (instruction == 32'hffff_ffff) begin
             case (systemcall_argument_1)
-                32'h0000_0000: begin
+                32'h0000_0000: begin // $v0 = 0, read data is signed.
                     read_data = {(data_switch[7] ? 24'hffffff : 24'h000000), data_switch};
                 end
-                32'h0000_0001: begin
+                32'h0000_0001: begin // $v0 = 1. read data is unsigne
                     read_data = {24'h000000, data_switch};
                 end
                 default: begin

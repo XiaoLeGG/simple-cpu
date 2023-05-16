@@ -64,6 +64,9 @@ begin
     if (Jal == 1'b1) begin // jal needs to rewrite $ra
         write_register = 5'b11110;
     end
+    else if (HwtoReg == 1'b1) begin // hardware write to the $a0
+        write_register = 5'b00100;
+    end
     else begin
         write_register = RegDst ? ins15_11 : ins20_16;
     end
@@ -89,12 +92,15 @@ begin
             if (write_register == 5'b00000) begin
                 register[write_register] = 32'h0000_0000;
             end
-            else begin
+            else if (HwtoReg == 1'b1) begin // get data from hardware
+                register[write_register] = hw_data;
+            end
+            else begin // get data from Mem or Alu
                 register[write_register] = MemtoReg ? mem_data : alu_data;
             end
-        end else begin
+        end /*else begin
             register[write_register] = register[write_register];
-        end
+        end*/
     end
 end
 endmodule

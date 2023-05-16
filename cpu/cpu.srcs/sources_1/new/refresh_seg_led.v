@@ -24,9 +24,10 @@ module refresh_seg_led(
     input [31:0] binary,
     input clk,
     input rst_n,
+    input isSigned,
     output reg [7:0] seg_en,
     output [7:0] seg_out0,
-    output [7:0] seg_out1 
+    output [7:0] seg_out1
 );
 
 parameter period = 200000;
@@ -60,7 +61,35 @@ end
 reg [31:0] bcd;
 
 always @(binary) begin
+    bcd = binary;
+    if (isSigned == 1'b1 && bcd[31] == 1'b1) begin // signed number
+        bcd = ~(bcd - 1'b1);
+    end
     
+    if (bcd[3:0] > 4'b1001) begin
+        bcd  = bcd + 4'h6;
+    end
+    if (bcd[7:4] > 4'b1001) begin
+        bcd = bcd + 8'h6_0;
+    end
+    if (bcd[11:8] > 4'b1001) begin
+        bcd = bcd + 12'h6_0_0;
+    end
+    if (bcd[15:12] > 4'b1001) begin
+        bcd = bcd + 16'h6_0_0_0;
+    end
+    if (bcd[19:16] > 4'b1001) begin
+        bcd = bcd + 20'h6_0_0_0_0;
+    end
+    if (bcd[23:20] > 4'b1001) begin
+        bcd = bcd + 24'h6_0_0_0_0_0;
+    end
+    if (bcd[27:24] > 4'b1001) begin
+        bcd = bcd + 28'h6_0_0_0_0_0_0;
+    end
+    if (bcd[21:28] > 4'b1001) begin
+        bcd = bcd + 32'h6_0_0_0_0_0_0_0;
+    end
 end
 
 always @(posedge clkout, negedge rst_n)

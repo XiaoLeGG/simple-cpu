@@ -74,20 +74,18 @@ begin
         end
     endcase
 
-    block_ins = (opcode = 6'b111111 && funct == 6'b111111) && (systemcall_argument_1 == 32'h0000_0000 || systemcall_argument_1 = 32'h0000_0001);
+    block_ins = (opcode == 6'b111111 && funct == 6'b111111) && (systemcall_argument_1 == 32'h0000_0000 || systemcall_argument_1 == 32'h0000_0001);
     
     // lbu || lhu || ll || lw
     MemRead = (opcode == 6'h24 || opcode == 6'h25 || opcode == 6'h30 || opcode == 6'h23);
     
-    
     // lbu || lhu || ll || lw
     MemtoReg = (opcode == 6'h24 || opcode == 6'h25 || opcode == 6'h30 || opcode == 6'h23);
-    HwtoReg = (opcode == 6'b111111 && funct == 6'b111111) && (systemcall_argument_1 == 32'h0000_0000);
     
+    HwtoReg = (opcode == 6'b111111 && funct == 6'b111111) && (systemcall_argument_1 == 32'h0000_0000 || systemcall_argument_1 == 32'h0000_0001);
     
     // sb || sc || sh || sw
     MemWrite = (opcode == 6'h28 || opcode == 6'h38 || opcode == 6'h29 || opcode == 6'h2b);
-    
     
      // addi || addiu || lbu || lhu
     // || ll || lw || slti || sltiu
