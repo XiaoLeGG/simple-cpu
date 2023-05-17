@@ -28,28 +28,16 @@
 		addi $zero, $zero, 12345
 		
 		add $s0, $a0, $zero
-		add $s1, $zero, $zero
-		addi $s2, $zero, 1
-		addi $s7, $zero, 0
-		addi $s6, $zero, 8
-		loop0:	and $s3, $s2, $s1
-			srl $s0, $s0, 1
-			beq $s3, $zero, noadd0
-			addi $s1, $s1, 1
-		noadd0:	beq $s6, $s7, break0
-			addi $s7, $s7, 1
-			j loop0
-	break0:	add $a0, $zero, $zero
-		bne $s2, $s1, out0
-		addi $a0, $zero, 1
-	out0:	addi $v0, $zero, 4 # result led
+		addi $s1, $s0, -1
+		addi $v0, $zero, 4 # result led
+		and $a0, $s0, $s1
 		addi $zero, $zero, 12345
 		j While
 		
 	case1:	addi $v0, $zero, 1
 		addi $zero, $zero, 12345
 		
-		addi $v0, $zero, 2
+		addi $v0, $zero, 3
 		addi $zero, $zero, 12345
 		
 		add $s0, $a0, $zero
