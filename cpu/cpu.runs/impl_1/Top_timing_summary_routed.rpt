@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Wed May 17 21:49:48 2023
-| Host         : LAPTOP-IFRFTT91 running 64-bit major release  (build 9200)
+| Date         : Thu May 18 00:06:00 2023
+| Host         : LAPTOP-GG472EI9 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file Top_timing_summary_routed.rpt -rpx Top_timing_summary_routed.rpx -warn_on_violation
 | Design       : Top
 | Device       : 7a35t-csg324
@@ -54,7 +54,9 @@ Table of Contents
 --------------------
  There are 32 register/latch pins with no clock driven by root clock pin: confirm_button (HIGH)
 
- There are 1156 register/latch pins with no clock driven by root clock pin: raw_clock (HIGH)
+ There are 34 register/latch pins with no clock driven by root clock pin: hard_ware_rst (HIGH)
+
+ There are 1326 register/latch pins with no clock driven by root clock pin: raw_clock (HIGH)
 
  There are 3 register/latch pins with no clock driven by root clock pin: hwass/rsl/clkout_reg/Q (HIGH)
 
@@ -352,6 +354,26 @@ Table of Contents
 
  There are 43 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
 
+ There are 34 register/latch pins with no clock driven by root clock pin: uart/inst/upg_inst/disp_reg[0]/Q (HIGH)
+
+ There are 34 register/latch pins with no clock driven by root clock pin: uart/inst/upg_inst/disp_reg[1]/Q (HIGH)
+
+ There are 34 register/latch pins with no clock driven by root clock pin: uart/inst/upg_inst/disp_reg[2]/Q (HIGH)
+
+ There are 34 register/latch pins with no clock driven by root clock pin: uart/inst/upg_inst/disp_reg[3]/Q (HIGH)
+
+ There are 34 register/latch pins with no clock driven by root clock pin: uart/inst/upg_inst/disp_reg[4]/Q (HIGH)
+
+ There are 34 register/latch pins with no clock driven by root clock pin: uart/inst/upg_inst/disp_reg[5]/Q (HIGH)
+
+ There are 34 register/latch pins with no clock driven by root clock pin: uart/inst/upg_inst/disp_reg[6]/Q (HIGH)
+
+ There are 34 register/latch pins with no clock driven by root clock pin: uart/inst/upg_inst/disp_reg[7]/Q (HIGH)
+
+ There are 207 register/latch pins with no clock driven by root clock pin: uart/inst/upg_inst/rdStat_reg/Q (HIGH)
+
+ There are 34 register/latch pins with no clock driven by root clock pin: uart/inst/upg_inst/upg_done_o_reg/Q (HIGH)
+
 
 2. checking constant_clock
 --------------------------
@@ -365,21 +387,21 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 3977 pins that are not constrained for maximum delay. (HIGH)
+ There are 5154 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
 5. checking no_input_delay
 --------------------------
- There are 9 input ports with no input delay specified. (HIGH)
+ There are 10 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
 6. checking no_output_delay
 ---------------------------
- There are 26 ports with no output delay specified. (HIGH)
+ There are 27 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 

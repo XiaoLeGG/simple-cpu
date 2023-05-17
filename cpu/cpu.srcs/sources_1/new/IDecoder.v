@@ -36,6 +36,7 @@ module IDecoder(
     input [31:0] alu_data,
     input [31:0] mem_data,
     input [31:0] hw_data,
+    input block_s,
     output reg [31:0] read_data_1,
     output reg [31:0] read_data_2,
     output reg [31:0] systemcall_argument_1,
@@ -68,7 +69,7 @@ begin
         write_register = 5'b00100;
     end
     else begin
-        write_register = RegDst ? ins15_11 : ins20_16;
+        write_register = (~block_s) & (RegDst ? ins15_11 : ins20_16);
     end
     //select the write register
 end
