@@ -75,3 +75,5 @@ set_property src_info {type:XDC file:1 line:74 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN E3 [get_ports {seg_out1[6]}]
 set_property src_info {type:XDC file:1 line:76 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN D4 [get_ports {seg_out1[7]}]
+set_property src_info {type:XDC file:1 line:79 export:INPUT save:INPUT read:READ} [current_design]
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {confirm_button_IBUF}]

@@ -1,15 +1,15 @@
 .data
 	
 .text
-	li $t0, 0
-	li $t1, 1
-	li $t2, 2
-	li $t3, 3
-	li $t4, 4
-	li $t5, 5
-	li $t6, 6
-	li $t7, 7
-	While:  li $v0, 0
+	addi $t0, $zero, 0
+	addi $t1, $zero, 1
+	addi $t2, $zero, 2
+	addi $t3, $zero, 3
+	addi $t4, $zero, 4
+	addi $t5, $zero, 5
+	addi $t6, $zero, 6
+	addi $t7, $zero, 7
+	While:  addi $v0, $zero, 0
 		addi $zero, $zero, 12345 # syscall
 		beq $t0, $a0, case0
 		beq $t1, $a0, case1
@@ -21,59 +21,114 @@
 		beq $t7, $a0, case7
 		j While
 	
-	case0:  li $v0, 0
+	case0:  addi $v0, $zero, 1
 		addi $zero, $zero, 12345
 		
-		li $v0, 11 # show case1
+		addi $v0, $zero, 3 # show case1
+		addi $zero, $zero, 12345
+		
+		add $s0, $a0, $zero
+		add $s1, $zero, $zero
+		addi $s2, $zero, 1
+		addi $s7, $zero, 0
+		addi $s6, $zero, 8
+		loop0:	and $s3, $s2, $s1
+			srl $s0, $s0, 1
+			beq $s3, $zero, noadd0
+			addi $s1, $s1, 1
+		noadd0:	beq $s6, $s7, break0
+			addi $s7, $s7, 1
+			j loop0
+	break0:	add $a0, $zero, $zero
+		bne $s2, $s1, out0
+		addi $a0, $zero, 1
+	out0:	addi $v0, $zero, 4 # result led
 		addi $zero, $zero, 12345
 		j While
 		
-	case1:	li $v0, 0
+	case1:	addi $v0, $zero, 1
 		addi $zero, $zero, 12345
 		
-		li $v0, 11 # show case2
+		addi $v0, $zero, 2
+		addi $zero, $zero, 12345
+		
+		add $s0, $a0, $zero
+		addi $s1, $zero, 1
+		and $s2, $s1, $s0
+		add $a0, $zero, $zero
+		beq $s2, $zero, out1
+		addi $a0, $zero, 1
+		
+	out1:	addi $v0, $zero, 4 # result led
 		addi $zero, $zero, 12345
 		j While
 		
-	case2:	or $s2, $s0, $s1
+	case2:	sll $s0, $s0, 24
+		sll $s1, $s1, 24
+		srl $s0, $s0, 24
+		srl $s1, $s1, 24
+		
+		or $s2, $s0, $s1
 	
-		li $v0, 10 # show in seg_led only
+		addi $v0, $zero, 2 # show in seg_led only
 		add $a0, $s2, $zero
 		addi $zero, $zero, 12345
 		j While
 		
-	case3:	nor $s2, $s0, $s1
+	case3:	sll $s0, $s0, 24
+		sll $s1, $s1, 24
+		srl $s0, $s0, 24
+		srl $s1, $s1, 24
 		
-		li $v0, 10 # show in seg_led only
+		nor $s2, $s0, $s1
+		
+		addi $v0, $zero, 2 # show in seg_led only
 		add $a0, $s2, $zero
 		addi $zero, $zero, 12345
 		j While
 		
-	case4:	xor $s2, $s0, $s1
+	case4:	sll $s0, $s0, 24
+		sll $s1, $s1, 24
+		srl $s0, $s0, 24
+		srl $s1, $s1, 24
+		
+		xor $s2, $s0, $s1
 	
-		li $v0, 10 # show in seg_led only(signed)
+		addi $v0, $zero, 2 # show in seg_led only(signed)
 		add $a0, $s2, $zero
 		addi $zero, $zero, 12345
 		j While
 		
 	case5:	slt $s2, $s0, $s1
 	
-		li $v0, 12 # show compare result
+		addi $v0, $zero, 4 # result led
 		add $a0, $s2, $zero
 		addi $zero, $zero, 12345
 		j While
 		
-	case6:	sltu $s2, $s0, $s1
+	case6:	sll $s0, $s0, 24
+		sll $s1, $s1, 24
+		srl $s0, $s0, 24
+		srl $s1, $s1, 24
+		
+		sltu $s2, $s0, $s1
 	
-		li $v0, 12 # show compare result
+		addi $v0, $zero, 4 # result led
 		add $a0, $s2, $zero
 		addi $zero, $zero, 12345
 		j While
 		
-	case7:	li $v0, 0
+	case7:	addi $v0, $zero, 0
 		addi $zero, $zero, 12345
 		add $s0, $a0, $zero
 		
+		addi $v0, $zero, 2
+		addi $zero, $zero, 12345
+		
+		addi $v0, $zero, 0
 		addi $zero, $zero, 12345
 		add $s1, $a0, $zero
+
+		addi $v0, $zero, 2
+		addi $zero, $zero, 12345
 		j While

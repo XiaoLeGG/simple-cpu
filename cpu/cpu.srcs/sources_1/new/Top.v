@@ -157,6 +157,7 @@ module Top(
     .ALUSrc(controller_ALUSrc),
     .PC_address(pc_output_address_o),
     .zero_s(alu_zero_s),
+    .error_led(error_led),
     .result(alu_result)
     );
     

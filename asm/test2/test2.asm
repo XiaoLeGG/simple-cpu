@@ -1,16 +1,16 @@
 .data
 	
 .text
-	li $t0, 0
-	li $t1, 1
-	li $t2, 2
-	li $t3, 3
-	li $t4, 4
-	li $t5, 5
-	li $t6, 6
-	li $t7, 7
+	addi $t0, $zero, 0
+	addi $t1, $zero, 1
+	addi $t2, $zero, 2
+	addi $t3, $zero, 3
+	addi $t4, $zero, 4
+	addi $t5, $zero, 5
+	addi $t6, $zero, 6
+	addi $t7, $zero, 7
 	
-	While:  li $v0, 0
+	While:  addi $v0, $zero, 0
 		addi $zero, $zero, 12345 # syscall
 		beq $t0, $a0, case0
 		beq $t1, $a0, case1
@@ -22,12 +22,19 @@
 		beq $t7, $a0, case7
 		j While
 	
-	case0:	li $v0, 0
+	case0:	addi $v0, $zero, 0
 		addi $zero, $zero, 12345
 		
 		add $s0, $a0, $zero
-		li $s1, 1
-		li $s2, 0
+		slt $s4, $s0, $zero
+		bne $s4, $zero, noless0
+		addi $v0, $zero, 4
+		addi $a0, $zero, 2
+		addi $zero, $zero, 12345
+	noless0:# li $s1, 1
+		addi $s1, $zero, 1
+		# li $s2, 0
+		addi $s2, $zero, 0
 		loop1:	add $s2, $s2, $s1
 			beq $s0, $s1, break1
 			slt $s3, $s0, $s1
@@ -36,7 +43,7 @@
 				j loop1
 			else:	addi $s1, $s1, 1
 				j loop1
-	break1:  li $v0, 10 # show signed ans
+	break1:  addi $v0, $zero, 2 # show signed ans
 		add $a0, $s2, $zero
 		addi $zero, $zero, 12345
 		

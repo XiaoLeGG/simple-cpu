@@ -75,3 +75,5 @@ set_property PACKAGE_PIN E3 [get_ports {seg_out1[6]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {seg_out1[6]}]
 set_property PACKAGE_PIN D4 [get_ports {seg_out1[7]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {seg_out1[7]}]
+
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {confirm_button_IBUF}]
