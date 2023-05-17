@@ -35,7 +35,7 @@ module DMemory(
     input upg_done_i
 );
 
-    wire kickOff = (~upg_rst_i) | (upg_rst_i & upg_done_i);
+    wire kickOff = (upg_rst_i) | (~upg_rst_i & upg_done_i);
 
     wire neg_clk;
     assign neg_clk = ~clk;
@@ -45,7 +45,7 @@ module DMemory(
         .clka(kickOff ? neg_clk : upg_clk_i),
         .wea(kickOff ? MemWrite : upg_wen_i),
         .addra(kickOff ? address_i[15:2] : upg_adr_i),
-        .dina(kickoff ? write_data : upg_dat_i),
+        .dina(kickOff ? write_data : upg_dat_i),
         .douta(read_data)
     );
 

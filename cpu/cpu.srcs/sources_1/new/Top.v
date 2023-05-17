@@ -72,7 +72,7 @@ module Top(
 
     // Generate UART Programmer reset signal
     wire upg_rst;
-    assign upg_rst = ~hard_ware_rst; 
+    assign upg_rst = hard_ware_rst; 
     //used for other modules which don't relatetoUARTwire rst;
     
     cpuclk cpu_clock(
@@ -101,7 +101,7 @@ module Top(
     
     wire [31:0] hwassistant_read_data;
     
-    assign block_led = block_s | controller_block_ins;
+    assign block_led = rst & (block_s | controller_block_ins);
     
     HWAssistant hwass(
         .rst(rst),
@@ -131,13 +131,16 @@ module Top(
         .address_o(pc_output_address_o)
     );
     
+    wire ifetch_upg_wen_o;
+    assign ifetch_upg_wen_o = upg_wen_o & ~upg_adr_o[14];
+    
     IFetch ifetch(
         .address_i(pc_output_address_o),
         .clk(clk23),
         .instruction_o(ifetch_instruction_o),
         .upg_rst_i(upg_rst),
         .upg_clk_i(upg_clk_o),
-        .upg_wen_i(upg_wen_o),
+        .upg_wen_i(ifetch_upg_wen_o),
         .upg_adr_i(upg_adr_o),
         .upg_dat_i(upg_dat_o),
         .upg_done_i(upg_done_o)
@@ -197,6 +200,9 @@ module Top(
         .result(alu_result)
     );
     
+    wire dmemory_upg_wen_o;
+    assign dmemory_upg_wen_o = upg_wen_o & upg_adr_o[14];
+    
     DMemory dmemory(
         .clk(clk23),
         .MemRead(controller_MemRead),
@@ -206,7 +212,7 @@ module Top(
         .read_data(dmemory_read_data),
         .upg_rst_i(upg_rst),
         .upg_clk_i(upg_clk_o),
-        .upg_wen_i(upg_wen_o),
+        .upg_wen_i(dmemory_upg_wen_o),
         .upg_adr_i(upg_adr_o),
         .upg_dat_i(upg_dat_o),
         .upg_done_i(upg_done_o)

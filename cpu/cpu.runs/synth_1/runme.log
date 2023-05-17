@@ -11,21 +11,18 @@
 source Top.tcl -notrace
 Command: synth_design -top Top -part xc7a35tcsg324-1
 Starting synth_design
-WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
-D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem.xci
-
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2572 
+INFO: Helper process launched with PID 8356 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 405.742 ; gain = 101.188
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 406.594 ; gain = 102.773
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Top' [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/Top.v:23]
-INFO: [Synth 8-638] synthesizing module 'cpuclk' [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-20900-LAPTOP-GG472EI9/realtime/cpuclk_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'cpuclk' (1#1) [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-20900-LAPTOP-GG472EI9/realtime/cpuclk_stub.v:5]
-INFO: [Synth 8-638] synthesizing module 'uart_bmpg_0' [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-20900-LAPTOP-GG472EI9/realtime/uart_bmpg_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'uart_bmpg_0' (2#1) [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-20900-LAPTOP-GG472EI9/realtime/uart_bmpg_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'cpuclk' [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-27652-LAPTOP-GG472EI9/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'cpuclk' (1#1) [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-27652-LAPTOP-GG472EI9/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'uart_bmpg_0' [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-27652-LAPTOP-GG472EI9/realtime/uart_bmpg_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'uart_bmpg_0' (2#1) [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-27652-LAPTOP-GG472EI9/realtime/uart_bmpg_0_stub.v:6]
 INFO: [Synth 8-638] synthesizing module 'HWAssistant' [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/HWAssistant.v:23]
 INFO: [Synth 8-638] synthesizing module 'refresh_seg_led' [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/refresh_seg_led.v:23]
 	Parameter period bound to: 200000 - type: integer 
@@ -40,10 +37,10 @@ INFO: [Synth 8-256] done synthesizing module 'HWAssistant' (6#1) [D:/workspace-v
 INFO: [Synth 8-638] synthesizing module 'PC' [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/PC.v:23]
 INFO: [Synth 8-256] done synthesizing module 'PC' (7#1) [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/PC.v:23]
 INFO: [Synth 8-638] synthesizing module 'IFetch' [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/IFetch.v:23]
-INFO: [Synth 8-638] synthesizing module 'IMem' [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-20900-LAPTOP-GG472EI9/realtime/IMem_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'IMem' (8#1) [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-20900-LAPTOP-GG472EI9/realtime/IMem_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'IMem' [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-27652-LAPTOP-GG472EI9/realtime/IMem_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'IMem' (8#1) [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-27652-LAPTOP-GG472EI9/realtime/IMem_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'IFetch' (9#1) [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/IFetch.v:23]
-WARNING: [Synth 8-689] width (15) of port connection 'upg_adr_i' does not match port width (14) of module 'IFetch' [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/Top.v:141]
+WARNING: [Synth 8-689] width (15) of port connection 'upg_adr_i' does not match port width (14) of module 'IFetch' [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/Top.v:144]
 INFO: [Synth 8-638] synthesizing module 'Controller' [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/Controller.v:23]
 INFO: [Synth 8-155] case statement is not full and has no default [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/Controller.v:122]
 WARNING: [Synth 8-3848] Net block_s in module/entity Controller does not have driver. [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/Controller.v:28]
@@ -53,13 +50,12 @@ INFO: [Synth 8-256] done synthesizing module 'IDecoder' (11#1) [D:/workspace-ver
 INFO: [Synth 8-638] synthesizing module 'ALU' [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/ALU.v:23]
 INFO: [Synth 8-226] default block is never used [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/ALU.v:37]
 INFO: [Synth 8-256] done synthesizing module 'ALU' (12#1) [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/ALU.v:23]
-WARNING: [Synth 8-350] instance 'alu' of module 'ALU' requires 9 connections, but only 8 given [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/Top.v:189]
+WARNING: [Synth 8-350] instance 'alu' of module 'ALU' requires 9 connections, but only 8 given [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/Top.v:192]
 INFO: [Synth 8-638] synthesizing module 'DMemory' [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/DMemory.v:23]
-INFO: [Synth 8-638] synthesizing module 'RAM' [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-20900-LAPTOP-GG472EI9/realtime/RAM_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'RAM' (13#1) [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-20900-LAPTOP-GG472EI9/realtime/RAM_stub.v:6]
-WARNING: [Synth 8-3848] Net kickoff in module/entity DMemory does not have driver. [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/DMemory.v:48]
+INFO: [Synth 8-638] synthesizing module 'RAM' [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-27652-LAPTOP-GG472EI9/realtime/RAM_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'RAM' (13#1) [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-27652-LAPTOP-GG472EI9/realtime/RAM_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'DMemory' (14#1) [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/DMemory.v:23]
-WARNING: [Synth 8-689] width (15) of port connection 'upg_adr_i' does not match port width (14) of module 'DMemory' [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/Top.v:210]
+WARNING: [Synth 8-689] width (15) of port connection 'upg_adr_i' does not match port width (14) of module 'DMemory' [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/Top.v:216]
 INFO: [Synth 8-638] synthesizing module 'Sign_Extend' [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/Sign_Extend.v:23]
 INFO: [Synth 8-256] done synthesizing module 'Sign_Extend' (15#1) [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/Sign_Extend.v:23]
 INFO: [Synth 8-256] done synthesizing module 'Top' (16#1) [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/Top.v:23]
@@ -102,7 +98,7 @@ WARNING: [Synth 8-3331] design IFetch has unconnected port address_i[16]
 WARNING: [Synth 8-3331] design IFetch has unconnected port address_i[1]
 WARNING: [Synth 8-3331] design IFetch has unconnected port address_i[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 470.625 ; gain = 166.070
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 470.859 ; gain = 167.039
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -112,21 +108,21 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 470.625 ; gain = 166.070
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 470.859 ; gain = 167.039
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-20900-LAPTOP-GG472EI9/dcp4/RAM_in_context.xdc] for cell 'dmemory/ram'
-Finished Parsing XDC File [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-20900-LAPTOP-GG472EI9/dcp4/RAM_in_context.xdc] for cell 'dmemory/ram'
-Parsing XDC File [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-20900-LAPTOP-GG472EI9/dcp5/IMem_in_context.xdc] for cell 'ifetch/ram'
-Finished Parsing XDC File [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-20900-LAPTOP-GG472EI9/dcp5/IMem_in_context.xdc] for cell 'ifetch/ram'
-Parsing XDC File [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-20900-LAPTOP-GG472EI9/dcp6/cpuclk_in_context.xdc] for cell 'cpu_clock'
-Finished Parsing XDC File [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-20900-LAPTOP-GG472EI9/dcp6/cpuclk_in_context.xdc] for cell 'cpu_clock'
-Parsing XDC File [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-20900-LAPTOP-GG472EI9/dcp7/uart_bmpg_0_in_context.xdc] for cell 'uart'
-Finished Parsing XDC File [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-20900-LAPTOP-GG472EI9/dcp7/uart_bmpg_0_in_context.xdc] for cell 'uart'
+Parsing XDC File [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-27652-LAPTOP-GG472EI9/dcp4/RAM_in_context.xdc] for cell 'dmemory/ram'
+Finished Parsing XDC File [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-27652-LAPTOP-GG472EI9/dcp4/RAM_in_context.xdc] for cell 'dmemory/ram'
+Parsing XDC File [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-27652-LAPTOP-GG472EI9/dcp5/cpuclk_in_context.xdc] for cell 'cpu_clock'
+Finished Parsing XDC File [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-27652-LAPTOP-GG472EI9/dcp5/cpuclk_in_context.xdc] for cell 'cpu_clock'
+Parsing XDC File [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-27652-LAPTOP-GG472EI9/dcp6/uart_bmpg_0_in_context.xdc] for cell 'uart'
+Finished Parsing XDC File [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-27652-LAPTOP-GG472EI9/dcp6/uart_bmpg_0_in_context.xdc] for cell 'uart'
+Parsing XDC File [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-27652-LAPTOP-GG472EI9/dcp7/IMem_in_context.xdc] for cell 'ifetch/ram'
+Finished Parsing XDC File [D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/.Xil/Vivado-27652-LAPTOP-GG472EI9/dcp7/IMem_in_context.xdc] for cell 'ifetch/ram'
 Parsing XDC File [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/constrs_1/new/ego1.xdc]
 WARNING: [Vivado 12-507] No nets matched 'confirm_button_IBUF'. [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/constrs_1/new/ego1.xdc:78]
 Finished Parsing XDC File [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/constrs_1/new/ego1.xdc]
@@ -140,16 +136,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 817.863 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 818.230 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 817.863 ; gain = 513.309
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 818.230 ; gain = 514.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 817.863 ; gain = 513.309
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 818.230 ; gain = 514.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -159,7 +155,7 @@ Applied set_property DONT_TOUCH = true for dmemory/ram. (constraint file  auto g
 Applied set_property DONT_TOUCH = true for ifetch/ram. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for uart. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 817.863 ; gain = 513.309
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 818.230 ; gain = 514.410
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "clkout" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -168,8 +164,8 @@ INFO: [Synth 8-5545] ROM "result_led" won't be mapped to RAM because address siz
 INFO: [Synth 8-5545] ROM "read_data" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "display_number" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "led_type" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-4471] merging register 'address_o_reg[31:0]' into 'PC_reg_reg[31:0]' [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/PC.v:84]
-WARNING: [Synth 8-6014] Unused sequential element address_o_reg was removed.  [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/PC.v:84]
+INFO: [Synth 8-4471] merging register 'address_o_reg[31:0]' into 'PC_reg_reg[31:0]' [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/PC.v:88]
+WARNING: [Synth 8-6014] Unused sequential element address_o_reg was removed.  [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/PC.v:88]
 INFO: [Synth 8-5545] ROM "confirm_value" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "Branch" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "ALUOp" won't be mapped to RAM because it is too sparse
@@ -209,7 +205,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'display_number_reg' [D:/wor
 WARNING: [Synth 8-327] inferring latch for variable 'led_type_reg' [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/HWAssistant.v:52]
 WARNING: [Synth 8-327] inferring latch for variable 'ALUOp_reg' [D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/new/Controller.v:126]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 817.863 ; gain = 513.309
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 818.230 ; gain = 514.410
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'hwass/rsl/l1' (light_7seg_ego1) to 'hwass/rsl/l0'
 
@@ -234,7 +230,7 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 25    
+	   2 Input     32 Bit        Muxes := 26    
 	   6 Input     32 Bit        Muxes := 2     
 	   4 Input     32 Bit        Muxes := 2     
 	   2 Input     16 Bit        Muxes := 1     
@@ -304,7 +300,7 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     32 Bit       Adders := 2     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 5     
+	   2 Input     32 Bit        Muxes := 6     
 	   4 Input     32 Bit        Muxes := 2     
 Module IFetch 
 Detailed RTL Component Info : 
@@ -497,7 +493,7 @@ WARNING: [Synth 8-3332] Sequential element (register_reg[0][2]) is unused and wi
 WARNING: [Synth 8-3332] Sequential element (register_reg[0][1]) is unused and will be removed from module IDecoder.
 WARNING: [Synth 8-3332] Sequential element (register_reg[0][0]) is unused and will be removed from module IDecoder.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:51 ; elapsed = 00:02:20 . Memory (MB): peak = 817.863 ; gain = 513.309
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:34 ; elapsed = 00:03:05 . Memory (MB): peak = 818.230 ; gain = 514.410
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -512,13 +508,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'cpu_clock/clk_out1' to pi
 INFO: [Synth 8-5578] Moved timing constraint from pin 'cpu_clock/clk_out2' to pin 'cpu_clock/bbstub_clk_out2/O'
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:55 ; elapsed = 00:02:26 . Memory (MB): peak = 843.484 ; gain = 538.930
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:38 ; elapsed = 00:03:11 . Memory (MB): peak = 846.867 ; gain = 543.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:01 ; elapsed = 00:02:33 . Memory (MB): peak = 849.668 ; gain = 545.113
+Finished Timing Optimization : Time (s): cpu = 00:01:41 ; elapsed = 00:03:19 . Memory (MB): peak = 852.496 ; gain = 548.676
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -530,7 +526,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:05 ; elapsed = 00:02:38 . Memory (MB): peak = 999.246 ; gain = 694.691
+Finished Technology Mapping : Time (s): cpu = 00:01:44 ; elapsed = 00:03:24 . Memory (MB): peak = 1002.395 ; gain = 698.574
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -554,7 +550,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:06 ; elapsed = 00:02:38 . Memory (MB): peak = 999.246 ; gain = 694.691
+Finished IO Insertion : Time (s): cpu = 00:01:44 ; elapsed = 00:03:25 . Memory (MB): peak = 1002.395 ; gain = 698.574
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -567,7 +563,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:06 ; elapsed = 00:02:38 . Memory (MB): peak = 999.246 ; gain = 694.691
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:44 ; elapsed = 00:03:25 . Memory (MB): peak = 1002.395 ; gain = 698.574
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -579,25 +575,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:06 ; elapsed = 00:02:39 . Memory (MB): peak = 999.246 ; gain = 694.691
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:44 ; elapsed = 00:03:25 . Memory (MB): peak = 1002.395 ; gain = 698.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:06 ; elapsed = 00:02:39 . Memory (MB): peak = 999.246 ; gain = 694.691
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:44 ; elapsed = 00:03:25 . Memory (MB): peak = 1002.395 ; gain = 698.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:06 ; elapsed = 00:02:39 . Memory (MB): peak = 999.246 ; gain = 694.691
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:44 ; elapsed = 00:03:25 . Memory (MB): peak = 1002.395 ; gain = 698.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:06 ; elapsed = 00:02:39 . Memory (MB): peak = 999.246 ; gain = 694.691
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:44 ; elapsed = 00:03:25 . Memory (MB): peak = 1002.395 ; gain = 698.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -623,12 +619,12 @@ Report Cell Usage:
 |4     |uart_bmpg_0 |     1|
 |5     |BUFG        |     3|
 |6     |CARRY4      |    84|
-|7     |LUT1        |    46|
-|8     |LUT2        |   173|
-|9     |LUT3        |   132|
-|10    |LUT4        |   277|
+|7     |LUT1        |    47|
+|8     |LUT2        |   171|
+|9     |LUT3        |   131|
+|10    |LUT4        |   333|
 |11    |LUT5        |   506|
-|12    |LUT6        |  1279|
+|12    |LUT6        |  1277|
 |13    |MUXF7       |   450|
 |14    |MUXF8       |    64|
 |15    |FDCE        |  1095|
@@ -643,22 +639,22 @@ Report Instance Areas:
 +------+-------------------+----------------+------+
 |      |Instance           |Module          |Cells |
 +------+-------------------+----------------+------+
-|1     |top                |                |  4374|
-|2     |  controller       |Controller      |   181|
+|1     |top                |                |  4426|
+|2     |  controller       |Controller      |   179|
 |3     |  dmemory          |DMemory         |    33|
-|4     |  hwass            |HWAssistant     |   648|
-|5     |    nolabel_line49 |light_control   |    83|
+|4     |  hwass            |HWAssistant     |   649|
+|5     |    nolabel_line49 |light_control   |    84|
 |6     |    rsl            |refresh_seg_led |   142|
-|7     |  idecoder         |IDecoder        |  2663|
-|8     |  ifetch           |IFetch          |   480|
-|9     |  pc               |PC              |   274|
+|7     |  idecoder         |IDecoder        |  2655|
+|8     |  ifetch           |IFetch          |   550|
+|9     |  pc               |PC              |   265|
 +------+-------------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:06 ; elapsed = 00:02:39 . Memory (MB): peak = 999.246 ; gain = 694.691
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:44 ; elapsed = 00:03:25 . Memory (MB): peak = 1002.395 ; gain = 698.574
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 75 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:59 ; elapsed = 00:02:33 . Memory (MB): peak = 999.246 ; gain = 347.453
-Synthesis Optimization Complete : Time (s): cpu = 00:02:06 ; elapsed = 00:02:39 . Memory (MB): peak = 999.246 ; gain = 694.691
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:38 ; elapsed = 00:03:20 . Memory (MB): peak = 1002.395 ; gain = 351.203
+Synthesis Optimization Complete : Time (s): cpu = 00:01:44 ; elapsed = 00:03:25 . Memory (MB): peak = 1002.395 ; gain = 698.574
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 657 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -670,10 +666,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LDC => LDCE: 43 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-151 Infos, 123 Warnings, 0 Critical Warnings and 0 Errors encountered.
+151 Infos, 121 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:07 ; elapsed = 00:02:42 . Memory (MB): peak = 999.246 ; gain = 706.211
+synth_design: Time (s): cpu = 00:01:45 ; elapsed = 00:03:29 . Memory (MB): peak = 1002.395 ; gain = 710.070
 INFO: [Common 17-1381] The checkpoint 'D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/Top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 999.246 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu May 18 00:04:58 2023...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1002.395 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu May 18 01:49:55 2023...

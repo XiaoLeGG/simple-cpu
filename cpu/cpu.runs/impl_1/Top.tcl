@@ -77,9 +77,9 @@ set rc [catch {
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   add_files -quiet D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/synth_1/Top.dcp
   read_ip -quiet D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/RAM/RAM.xci
-  read_ip -quiet D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem.xci
   read_ip -quiet D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/cpuclk/cpuclk.xci
   read_ip -quiet D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/uart_bmpg_0/uart_bmpg_0.xci
+  read_ip -quiet D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem.xci
   read_xdc D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/constrs_1/new/ego1.xdc
   link_design -top Top -part xc7a35tcsg324-1
   close_msg_db -file init_design.pb

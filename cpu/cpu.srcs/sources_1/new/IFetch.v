@@ -36,7 +36,7 @@ module IFetch(
 wire [31:0] fetch_ins;
 assign instruction_o = fetch_ins;
 
-wire kickOff = (~upg_rst_i) | (upg_rst_i & upg_done_i );
+wire kickOff = (upg_rst_i) | (~upg_rst_i & upg_done_i );
 
 IMem ram(
     .wea(kickOff ? 1'b0 :   upg_wen_i),

@@ -50,15 +50,15 @@ read_verilog -library xil_defaultlib {
 read_ip -quiet D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/RAM/RAM.xci
 set_property used_in_implementation false [get_files -all d:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/RAM/RAM_ooc.xdc]
 
-read_ip -quiet D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem.xci
-set_property used_in_implementation false [get_files -all d:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_ooc.xdc]
-
 read_ip -quiet D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/cpuclk/cpuclk.xci
 set_property used_in_implementation false [get_files -all d:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/cpuclk/cpuclk_board.xdc]
 set_property used_in_implementation false [get_files -all d:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/cpuclk/cpuclk.xdc]
 set_property used_in_implementation false [get_files -all d:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/cpuclk/cpuclk_ooc.xdc]
 
 read_ip -quiet D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/uart_bmpg_0/uart_bmpg_0.xci
+
+read_ip -quiet D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem.xci
+set_property used_in_implementation false [get_files -all d:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

@@ -52,29 +52,33 @@ end
 
 always@(*)
 begin
-    if (block_s || (block_ins && confirm != confirm_value)) begin
-        next_address = PC_reg;
-    end
-    else begin
-        case(branch_s)
-            2'b00: begin // no jump or compare
-                next_address = PC_reg + 3'b100;
-            end
-            2'b01: begin // j || jal
-                next_address = {PC_reg[31:28], jump_address26, 2'b00};
-            end
-            2'b10: begin// compare
-                if(zero_s == 1'b0) begin // no need to jump
+    if (~rst) begin
+        next_address = 32'h0000_0000;
+    end else begin
+        if (block_s || (block_ins && confirm != confirm_value)) begin
+            next_address = PC_reg;
+        end
+        else begin
+            case(branch_s)
+                2'b00: begin // no jump or compare
                     next_address = PC_reg + 3'b100;
                 end
-                else begin
+                2'b01: begin // j || jal
+                    next_address = {PC_reg[31:28], jump_address26, 2'b00};
+                end
+                2'b10: begin// compare
+                    if(zero_s == 1'b0) begin // no need to jump
+                        next_address = PC_reg + 3'b100;
+                    end
+                    else begin
+                        next_address = jump_address32;
+                    end
+                end
+                2'b11: begin // jr
                     next_address = jump_address32;
                 end
-            end
-            2'b11: begin // jr
-                next_address = jump_address32;
-            end
-        endcase
+            endcase
+        end
     end
 end
 
