@@ -191,15 +191,16 @@ case4:	addi $v0, $zero, 0 # get a
 	srl $s4, $s1, 31
 	srl $s5, $s0, 31
 	
-	beq $s3, $zero, noov4 # check whether overflow
+	xor $s6, $s3, $s5
+	xor $s7, $s3, $s4
+	and $s6, $s6, $s7
+	
+	beq $s6, $zero, noov4 # check whether overflow
 		addi $v0, $zero, 4 # overflow
 		addi $a0, $zero, 1
 		addi $zero, $zero, 12345
 	
-noov4:	sll $s2, $s2, 24
-	sra $s2, $s2, 24
-	
-	addi $v0, $zero, 2 # show a + b
+noov4:	addi $v0, $zero, 2 # show a + b
 	add $a0, $s2, $zero
 	addi $zero, $zero, 12345
 	
@@ -219,17 +220,20 @@ case5:	addi $v0, $zero, 0 # get a
 	
 	sub $s2, $s1, $s0
 	
-	srl $s3, $s3
+	srl $s3, $s2, 31
+	srl $s4, $s1, 31
+	srl $s5, $s0, 31
 	
-	beq $s3, $zero, noov5 # check whether overflow
+	xor $s6, $s5, $s4
+	xor $s7, $s5, $s3
+	and $s6, $s6, $s7
+	
+	beq $s6, $zero, noov5 # check whether overflow
 		addi $v0, $zero, 4 # overflow
 		addi $a0, $zero, 1
 		addi $zero, $zero, 12345
 	
-noov5:	sll $s2, $s2, 24
-	sra $s2, $s2, 24
-	
-	addi $v0, $zero, 2 # show a - b
+noov5:	addi $v0, $zero, 2 # show a - b
 	add $a0, $s2, $zero
 	addi $zero, $zero, 12345
 	
@@ -251,27 +255,24 @@ case6:	addi $v0, $zero, 0
 	
 	slt $s2, $s0, $zero # check whether a is negative
 	beq $s2, $zero, no6_0
-	addi $s3, $zero, 1
-	sub $s0, $zero, $s0
-	
+		addi $s3, $zero, 1
+		sub $s0, $zero, $s0
 no6_0:	slt $s2, $s1, $zero  # check whether a is negative
 	beq $s2, $zero, no6_1
-	addi $s3, $s3, 1
-	sub $s1, $zero, $s1
-
+		addi $s3, $s3, 1
+		sub $s1, $zero, $s1
 no6_1:	add $s4, $zero, $zero
 	addi $s2, $zero, 1
-loop6:	beq $s0, $zero, break6
-	and $s5, $s0, $s2
-	beq $s5, $zero, else6_0
-	add $s4, $s4, $s1
-else6_0:srl $s0, $s0, 1
-	sll $s1, $s1, 1
-	j loop6
+	loop6:	beq $s0, $zero, break6
+		and $s5, $s0, $s2
+		beq $s5, $zero, else6_0
+			add $s4, $s4, $s1
+	else6_0:srl $s0, $s0, 1
+		sll $s1, $s1, 1
+		j loop6
 break6:	addi $s5, $zero, 1
 	bne $s3, $s5, noneg6
-	sub $s4, $zero, $s4
-	
+		sub $s4, $zero, $s4
 noneg6:	addi $v0, $zero, 2 # show a * b
 	add $a0, $zero, $s4
 	addi $zero, $zero, 12345
@@ -288,14 +289,12 @@ case7:	addi $v0, $zero, 0
 	
 	slt $s2, $s0, $zero # check whether a is negative
 	beq $s2, $zero, no7_0
-	addi $s3, $zero, 1
-	sub $s0, $zero, $s0
-	
+		addi $s3, $zero, 1
+		sub $s0, $zero, $s0
 no7_0:	slt $s2, $s1, $zero  # check whether a is negative
 	beq $s2, $zero, no7_1
-	addi $s3, $s3, 1
-	sub $s1, $zero, $s1
-	
+		addi $s3, $s3, 1
+		sub $s1, $zero, $s1
 no7_1:	sll $s1, $s1, 8
 	add $s4, $zero, $zero
 	addi $s5, $zero, 8
@@ -304,15 +303,14 @@ loop7:	addi $s5, $s5, -1
 	sub $s0, $s0, $s1
 	slt $s7, $s0, $zero
 	beq $s7, $zero, noadd7
-	addi $s4, $s4, 1
-	add $s0, $s0, $s1
+		addi $s4, $s4, 1
+		add $s0, $s0, $s1
 noadd7:	sll $s4, $s4, 1
 	bne $s5, $zero, loop7
 
 	addi $s5, $zero, 1
 	bne $s3, $s5, notneg
-	sub $s4, $zero, $s4
-	
+		sub $s4, $zero, $s4
 notneg:	addi $v0, $zero, 2
 	add $a0, $zero, $s4
 	addi $zero, $zero, 12345
