@@ -16,6 +16,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_msg_config -id {Common 17-41} -limit 10000000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 create_project -in_memory -part xc7a35tcsg324-1
@@ -24,16 +25,16 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir D:/workspace-verilog/cs202-cpu/cpu/cpu.cache/wt [current_project]
-set_property parent.project_path D:/workspace-verilog/cs202-cpu/cpu/cpu.xpr [current_project]
+set_property webtalk.parent_dir D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.cache/wt [current_project]
+set_property parent.project_path D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_repo_paths d:/workspace-verilog/cs202-cpu/SEU_CSE_507_user_uart_bmpg_1.3 [current_project]
-set_property ip_output_repo d:/workspace-verilog/cs202-cpu/cpu/cpu.cache/ip [current_project]
+set_property ip_repo_paths d:/csw/Desk/CS202/CPU/simple-cpu/SEU_CSE_507_user_uart_bmpg_1.3 [current_project]
+set_property ip_output_repo d:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem.xci
-set_property used_in_implementation false [get_files -all d:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_ooc.xdc]
+read_ip -quiet D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/RAM/RAM.xci
+set_property used_in_implementation false [get_files -all d:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/RAM/RAM_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -46,11 +47,11 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 
-set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/IMem_synth_1 -new_name IMem -ip [get_ips IMem]]
+set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.runs/RAM_synth_1 -new_name RAM -ip [get_ips RAM]]
 
 if { $cached_ip eq {} } {
 
-synth_design -top IMem -part xc7a35tcsg324-1 -mode out_of_context
+synth_design -top RAM -part xc7a35tcsg324-1 -mode out_of_context
 
 #---------------------------------------------------------
 # Generate Checkpoint/Stub/Simulation Files For IP Cache
@@ -59,58 +60,58 @@ synth_design -top IMem -part xc7a35tcsg324-1 -mode out_of_context
 set_param constraints.enableBinaryConstraints false
 
 catch {
- write_checkpoint -force -noxdef -rename_prefix IMem_ IMem.dcp
+ write_checkpoint -force -noxdef -rename_prefix RAM_ RAM.dcp
 
  set ipCachedFiles {}
- write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ IMem_stub.v
- lappend ipCachedFiles IMem_stub.v
+ write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ RAM_stub.v
+ lappend ipCachedFiles RAM_stub.v
 
- write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ IMem_stub.vhdl
- lappend ipCachedFiles IMem_stub.vhdl
+ write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ RAM_stub.vhdl
+ lappend ipCachedFiles RAM_stub.vhdl
 
- write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ IMem_sim_netlist.v
- lappend ipCachedFiles IMem_sim_netlist.v
+ write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ RAM_sim_netlist.v
+ lappend ipCachedFiles RAM_sim_netlist.v
 
- write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ IMem_sim_netlist.vhdl
- lappend ipCachedFiles IMem_sim_netlist.vhdl
+ write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ RAM_sim_netlist.vhdl
+ lappend ipCachedFiles RAM_sim_netlist.vhdl
 
- config_ip_cache -add -dcp IMem.dcp -move_files $ipCachedFiles -use_project_ipc -ip [get_ips IMem]
+ config_ip_cache -add -dcp RAM.dcp -move_files $ipCachedFiles -use_project_ipc -ip [get_ips RAM]
 }
 
-rename_ref -prefix_all IMem_
+rename_ref -prefix_all RAM_
 
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef IMem.dcp
-create_report "IMem_synth_1_synth_report_utilization_0" "report_utilization -file IMem_utilization_synth.rpt -pb IMem_utilization_synth.pb"
+write_checkpoint -force -noxdef RAM.dcp
+create_report "RAM_synth_1_synth_report_utilization_0" "report_utilization -file RAM_utilization_synth.rpt -pb RAM_utilization_synth.pb"
 
 if { [catch {
-  file copy -force D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/IMem_synth_1/IMem.dcp D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem.dcp
+  file copy -force D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.runs/RAM_synth_1/RAM.dcp D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/RAM/RAM.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_stub.v
+  write_verilog -force -mode synth_stub D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/RAM/RAM_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_stub.vhdl
+  write_vhdl -force -mode synth_stub D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/RAM/RAM_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_sim_netlist.v
+  write_verilog -force -mode funcsim D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/RAM/RAM_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/RAM/RAM_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -120,46 +121,46 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/IMem_synth_1/IMem.dcp D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem.dcp
+  file copy -force D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.runs/RAM_synth_1/RAM.dcp D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/RAM/RAM.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/IMem_synth_1/IMem_stub.v D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_stub.v
+  file rename -force D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.runs/RAM_synth_1/RAM_stub.v D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/RAM/RAM_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/IMem_synth_1/IMem_stub.vhdl D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_stub.vhdl
+  file rename -force D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.runs/RAM_synth_1/RAM_stub.vhdl D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/RAM/RAM_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/IMem_synth_1/IMem_sim_netlist.v D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_sim_netlist.v
+  file rename -force D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.runs/RAM_synth_1/RAM_sim_netlist.v D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/RAM/RAM_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/workspace-verilog/cs202-cpu/cpu/cpu.runs/IMem_synth_1/IMem_sim_netlist.vhdl D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_sim_netlist.vhdl
+  file rename -force D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.runs/RAM_synth_1/RAM_sim_netlist.vhdl D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/RAM/RAM_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 }; # end if cached_ip 
 
-if {[file isdir D:/workspace-verilog/cs202-cpu/cpu/cpu.ip_user_files/ip/IMem]} {
+if {[file isdir D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.ip_user_files/ip/RAM]} {
   catch { 
-    file copy -force D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_stub.v D:/workspace-verilog/cs202-cpu/cpu/cpu.ip_user_files/ip/IMem
+    file copy -force D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/RAM/RAM_stub.v D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.ip_user_files/ip/RAM
   }
 }
 
-if {[file isdir D:/workspace-verilog/cs202-cpu/cpu/cpu.ip_user_files/ip/IMem]} {
+if {[file isdir D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.ip_user_files/ip/RAM]} {
   catch { 
-    file copy -force D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_stub.vhdl D:/workspace-verilog/cs202-cpu/cpu/cpu.ip_user_files/ip/IMem
+    file copy -force D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/RAM/RAM_stub.vhdl D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.ip_user_files/ip/RAM
   }
 }
