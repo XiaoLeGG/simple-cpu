@@ -4,5 +4,7 @@
 start:
 	addi $v0, $zero, 0
 	addi $zero, $zero, 12345
+	
+	slt $a0, $a0, $zero # check whether a < 0
 	addi $v0, $zero, 2
-	addi $zero, $zero, 12345 # syscall
+	addi $zero, $zero, 12345

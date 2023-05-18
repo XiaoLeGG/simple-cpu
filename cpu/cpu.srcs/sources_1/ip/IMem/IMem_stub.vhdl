@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Thu May 18 00:37:06 2023
--- Host        : LAPTOP-GG472EI9 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top IMem -prefix
---               IMem_ IMem_stub.vhdl
+-- Date        : Thu May 18 23:51:25 2023
+-- Host        : LAPTOP-IFRFTT91 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub
+--               D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/ip/IMem/IMem_stub.vhdl
 -- Design      : IMem
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcsg324-1

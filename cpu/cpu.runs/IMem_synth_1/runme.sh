@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.runs/RAM_synth_1'
+HD_PWD='D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.runs/IMem_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log RAM.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source RAM.tcl
+EAStep vivado -log IMem.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source IMem.tcl

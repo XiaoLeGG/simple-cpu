@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:D:/workspace-verilog/cs202-cpu/cpu/cpu.srcs/constrs_1/new/ego1.xdc rfile:../../../cpu.srcs/constrs_1/new/ego1.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/constrs_1/new/ego1.xdc rfile:../../../cpu.srcs/constrs_1/new/ego1.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN P17 [get_ports raw_clock]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
@@ -79,3 +79,5 @@ set_property src_info {type:XDC file:1 line:77 export:INPUT save:INPUT read:READ
 set_property -dict {IOSTANDARD LVCMOS33 PACKAGE_PIN N5} [get_ports rx]
 set_property src_info {type:XDC file:1 line:78 export:INPUT save:INPUT read:READ} [current_design]
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {confirm_button_IBUF}]
+set_property src_info {type:XDC file:1 line:80 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN K2 [get_ports negative_led]

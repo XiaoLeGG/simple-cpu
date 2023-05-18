@@ -1,6 +1,7 @@
-.data
+.data 0x0000
 	
-.text	
+.text	0x0000
+start:
 	addi $t0, $zero, 0
 	addi $t1, $zero, 1
 	addi $t2, $zero, 2
@@ -112,7 +113,7 @@ case0:	addi $v0, $zero, 0
 		beq $s3, $s0, break0
 		addi $s3, $s3, 1
 		j big0
-break0:	add $v0, $zero, 2
+break0:	addi $v0, $zero, 2
 	add $a0, $zero, $s2
 	addi $zero, $zero, 12345
 	j While
@@ -250,7 +251,7 @@ case6:	addi $v0, $zero, 0
 	add $s0, $zero, $a0
 	
 	addi $v0, $zero, 0
-	addi $zero, $zero 12345
+	addi $zero, $zero, 12345
 	add $s1, $zero, $a0
 	
 	slt $s2, $s0, $zero # check whether a is negative
@@ -284,7 +285,7 @@ case7:	addi $v0, $zero, 0
 	add $s0, $zero, $a0
 	
 	addi $v0, $zero, 0
-	addi $zero, $zero 12345
+	addi $zero, $zero, 12345
 	add $s1, $zero, $a0
 	
 	slt $s2, $s0, $zero # check whether a is negative

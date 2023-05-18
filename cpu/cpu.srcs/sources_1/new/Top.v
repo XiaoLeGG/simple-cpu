@@ -29,7 +29,7 @@ module Top(
     output tx,
     output block_led,
     output result_led,
-    output signal_led,
+    output negative_led,
     output wire[7:0] seg_en,
     output wire[7:0] seg_out0,
     output wire[7:0] seg_out1
@@ -115,7 +115,7 @@ module Top(
         .seg_out0(seg_out0),
         .seg_out1(seg_out1),
         .result_led(result_led),
-        .signal_led(signal_led),
+        .negative_led(negative_led),
         .read_data(hwassistant_read_data)
     );
     

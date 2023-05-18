@@ -1,7 +1,11 @@
 .data 0x0000
 	
-.text 0x000
-Start:
+.text 0x0000
+start:
+	add $zero, $zero, $zero
+	addi $a0, $zero, 50
+	addi $v0, $zero, 3
+	addi $zero, $zero, 12345
 	addi $t0, $zero, 0
 	addi $t1, $zero, 1
 	addi $t2, $zero, 2
@@ -31,6 +35,8 @@ Start:
 		and $a0, $a0, $s0
 		slt $a0, $zero, $a0
 		nor $a0, $zero, $a0
+		sll $a0, $a0, 31
+		srl $a0, $a0, 31
 		addi $v0, $zero, 4 # result led
 		addi $zero, $zero, 12345
 		j While

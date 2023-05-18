@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1684345580">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1684441308">
   <File Type="PA-TCL" Name="Top.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Top_reports.tcl"/>
   <File Type="RDS-RDS" Name="Top.vds"/>
   <File Type="RDS-UTIL" Name="Top_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="Top_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="Top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/ip/RAM/RAM.xci">
@@ -135,6 +138,6 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="cpuclk"/>
-  <BlockFileSet Type="BlockSrcs" Name="uart_bmpg_0"/>
   <BlockFileSet Type="BlockSrcs" Name="IMem"/>
+  <BlockFileSet Type="BlockSrcs" Name="uart_bmpg_0"/>
 </GenRun>

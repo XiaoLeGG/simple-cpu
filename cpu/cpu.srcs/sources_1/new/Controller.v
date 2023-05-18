@@ -91,10 +91,12 @@ begin
     // || ll || lw || slti || sltiu
     // || sb || sc || sh || sw
     // || andi || ori || xori || lui
+    // || sll || srl || sra
     ALUSrc = (opcode == 6'h08 || opcode == 6'h09 || opcode == 6'h24 || opcode == 6'h25
               || opcode == 6'h30 || opcode == 6'h23 || opcode == 6'h0a || opcode == 6'h0b
               || opcode == 6'h28 || opcode == 6'h38 || opcode == 6'h29 || opcode == 6'h2b
-              || opcode == 6'h0c || opcode == 6'h0d || opcode == 6'h0e || opcode == 6'h0f);
+              || opcode == 6'h0c || opcode == 6'h0d || opcode == 6'h0e || opcode == 6'h0f
+              || (opcode == 6'h00 && (funct == 6'h00 || funct == 6'h02 || funct == 6'h03)));
 
     // add || addu || and
     // || nor || or || slt || sltu
@@ -103,7 +105,7 @@ begin
     // || xor || addi || addiu || andi
     // || jal || lbu || lhu || ll
     // || lui || lw || ori || slti
-    // || sltiu || systemcall with v0 = 0
+    // || sltiu || systemcall with v0 = 0 || v0 == 1
     RegWrite = ((opcode == 6'h00 && (funct == 6'h20 || funct == 6'h21 || funct == 6'h24
                 || funct == 6'h27 || funct == 6'h25 || funct == 6'h2a || funct == 6'h2b
                 || funct == 6'h00 || funct == 6'h02 || funct == 6'h22 || funct == 6'h23
@@ -112,7 +114,7 @@ begin
                 || opcode == 6'h03 || opcode == 6'h24 || opcode == 6'h25 || opcode == 6'h30
                 || opcode == 6'h0f || opcode == 6'h23 || opcode == 6'h0d || opcode == 6'h0a
                 || opcode == 6'h0b))
-                || (opcode == 6'b111111 && funct == 6'b111111 && systemcall_argument_1 == 32'h0000_0000);
+                || (opcode == 6'b111111 && funct == 6'b111111 && (systemcall_argument_1 == 32'h0000_0000 || systemcall_argument_1 == 32'h0000_0001));
     
                 
     Jr = (opcode == 6'h00 && funct == 6'h08); // jr

@@ -36,17 +36,20 @@ always@(*)
 begin
     case(ALUOp)
         4'h0: begin // sll, sllv
-            result = (read_data_1 << (ALUSrc ? sign_extended_data : read_data_2));
+            // result = (read_data_1 << (ALUSrc ? sign_extended_data[10:6] : read_data_2));
+            result = (ALUSrc ? (read_data_2 << sign_extended_data[10:6]) : (read_data_1 << read_data_2));
             zero_s = 1'b0;
             block_s = 1'b0;
         end
         4'h1: begin // srl, srlv
-            result = (read_data_1 >> (ALUSrc ? sign_extended_data : read_data_2));
+            // result = (read_data_1 >> (ALUSrc ? sign_extended_data[10:6] : read_data_2));
+            result = (ALUSrc ? (read_data_2 >> sign_extended_data[10:6]) : (read_data_1 >> read_data_2));
             zero_s = 1'b0;
             block_s = 1'b0;
         end
         4'h2: begin // sra, srav
-            result = (read_data_1 >>> (ALUSrc ? sign_extended_data : read_data_2));
+            // result = (read_data_1 >>> (ALUSrc ? sign_extended_data[10:6] : read_data_2));
+            result = (ALUSrc ? (read_data_2 >>> sign_extended_data[10:6]) : (read_data_1 >>> read_data_2));
             zero_s = 1'b0;
             block_s = 1'b0;
         end
@@ -95,35 +98,35 @@ begin
             block_s = 1'b0;
         end
         4'hb: begin // slt, slti
-            result = (read_data_1 < (ALUSrc ? sign_extended_data : read_data_2));
-            zero_s = 1'b0;
-            block_s = 1'b0;
-        end
-        4'hc: begin // sltu, sltiu
-            if (read_data_1[31] == 1'b1 && (ALUSrc ? sign_extended_data[31] : read_data_2[31]) == 1'b1) begin 
-                result = {31'h0000_0000, (read_data_1 > (ALUSrc ? sign_extended_data : read_data_2))};
-                zero_s = 1'b0;
-                block_s = 1'b0;
-            end
-            // both two data's sign-bit are 1
-            else if (read_data_1[31] == 1'b1 && (ALUSrc ? sign_extended_data[31] : read_data_2[31]) == 1'b0) begin
-                result = 32'h0000_0000;
+           // both two data's sign-bit are 1
+           if (read_data_1[31] == 1'b1 && (ALUSrc ? sign_extended_data[31] : read_data_2[31]) == 1'b1) begin 
+                result = {31'h0000_0000, (read_data_1 < (ALUSrc ? sign_extended_data : read_data_2))};
                 zero_s = 1'b0;
                 block_s = 1'b0;
             end
             // data1's sign-bit is 1 and data2's sign-bit is 0
-            else if (read_data_1[31] == 1'b0 && (ALUSrc ? sign_extended_data[31] : read_data_2[31]) == 1'b1) begin
+            else if (read_data_1[31] == 1'b1 && (ALUSrc ? sign_extended_data[31] : read_data_2[31]) == 1'b0) begin
                 result = 32'h0000_0001;
                 zero_s = 1'b0;
                 block_s = 1'b0;
             end
             // data1's sign-bit is 0 and data2's sign-bit is 1
+            else if (read_data_1[31] == 1'b0 && (ALUSrc ? sign_extended_data[31] : read_data_2[31]) == 1'b1) begin
+                result = 32'h0000_0000;
+                zero_s = 1'b0;
+                block_s = 1'b0;
+            end
+            // both two data's sign-bit are 0
             else begin
                 result = {31'h0000_0000, (read_data_1 < (ALUSrc ? sign_extended_data : read_data_2))};
                 zero_s = 1'b0;
                 block_s = 1'b0;
             end
-            // both two data's sign-bit are 0
+        end
+        4'hc: begin // sltu, sltiu
+            result = (read_data_1 < (ALUSrc ? sign_extended_data : read_data_2));
+            zero_s = 1'b0;
+            block_s = 1'b0;
         end
         4'hd: begin // beq
             

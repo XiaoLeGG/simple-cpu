@@ -77,5 +77,5 @@ set_property -dict {IOSTANDARD LVCMOS33 PACKAGE_PIN T4} [get_ports tx]
 set_property -dict {IOSTANDARD LVCMOS33 PACKAGE_PIN N5} [get_ports rx]
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {confirm_button_IBUF}]
 
-set_property PACKAGE_PIN K2 [get_ports signal_led]
-set_property IOSTANDARD LVCMOS33 [get_ports signal_led]
+set_property PACKAGE_PIN K2 [get_ports negative_led]
+set_property IOSTANDARD LVCMOS33 [get_ports negative_led]

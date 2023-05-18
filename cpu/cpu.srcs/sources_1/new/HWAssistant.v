@@ -31,7 +31,7 @@ module HWAssistant(
     output [7:0] seg_out0,
     output [7:0] seg_out1,
     output result_led,
-    output reg signal_led,
+    output reg negative_led,
     output reg [31:0] read_data
     );
     
@@ -59,34 +59,32 @@ module HWAssistant(
             read_data = 32'h0000_0000;
             display_number = 32'h0000_0000;
             led_type = 2'b00;
+            negative_led = 1'b0;
         end else begin
         if (instruction == 32'hffff_ffff) begin
             case (systemcall_argument_1)
                 32'h0000_0000: begin // $v0 = 0, read data is signed.
                     read_data = {(data_switch[7] ? 24'hffffff : 24'h000000), data_switch};
-                    signal_led = 1'b0;
                 end
                 32'h0000_0001: begin // $v0 = 1. read data is unsigned
                     read_data = {24'h000000, data_switch};
-                    signal_led = 1'b0;
                 end
                 32'h0000_0002: begin
                     if (systemcall_argument_2[31:31] == 1'b1) begin
                         display_number = ~(systemcall_argument_2 - 1'b1);
-                        signal_led = 1'b1;
+                        negative_led = 1'b1;
                     end
                     else begin
                         display_number = systemcall_argument_2;
-                        signal_led = 1'b0;
+                        negative_led = 1'b0;
                     end
                 end
                 32'h0000_0003: begin // unsigned number
                     display_number = systemcall_argument_2;
-                    signal_led = 1'b0;
+                    negative_led = 1'b0;
                 end
                 32'h0000_0004: begin
                     led_type = systemcall_argument_2[1:0];
-                    signal_led = 1'b0;
                 end
                 default: begin
                     //read_data = {(data_switch[7] ? 24'hffffff : 24'h000000), data_switch};

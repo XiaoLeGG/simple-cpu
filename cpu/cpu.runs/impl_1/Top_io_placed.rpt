@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date                      : Thu May 18 01:50:39 2023
-| Host                      : LAPTOP-GG472EI9 running 64-bit major release  (build 9200)
+| Date                      : Fri May 19 04:25:54 2023
+| Host                      : LAPTOP-IFRFTT91 running 64-bit major release  (build 9200)
 | Command                   : report_io -file Top_io_placed.rpt
 | Design                    : Top
 | Device                    : xc7a35t
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            39 |
+|            40 |
 +---------------+
 
 
@@ -198,7 +198,7 @@ Table of Contents
 | J17        |                | High Range | IO_L23P_T3_FOE_B_15          | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | J18        |                | High Range | IO_L23N_T3_FWE_B_15          | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | K1         |                | High Range | IO_L23N_T3_35                | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| K2         |                | High Range | IO_L23P_T3_35                | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| K2         | negative_led   | High Range | IO_L23P_T3_35                | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | K3         |                | High Range | IO_L2P_T0_34                 | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | K4         |                | High Range | VCCO_34                      | VCCO        |             |      34 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | K5         |                | High Range | IO_L5P_T0_34                 | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

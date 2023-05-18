@@ -80,8 +80,6 @@ always@(posedge clk, negedge rst)
 begin
     register[0] = 32'h0000_0000;
     if (~rst) begin
-        
-        
         for (m = 0; m < 32; m = m + 1) begin
             if (m != 28 && m != 29) begin
                 register[m] = 32'h0000_0000;
@@ -102,7 +100,7 @@ begin
                 register[write_register] = hw_data;
             end
             else begin // get data from Mem or Alu
-                register[write_register] = MemtoReg ? mem_data : alu_data;
+                register[write_register] = (MemtoReg ? mem_data : alu_data);
             end
         end else begin
             register[write_register] = register[write_register];
