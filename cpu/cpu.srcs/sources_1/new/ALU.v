@@ -101,25 +101,25 @@ begin
         end
         4'hc: begin // sltu, sltiu
             if (read_data_1[31] == 1'b1 && (ALUSrc ? sign_extended_data[31] : read_data_2[31]) == 1'b1) begin 
-                result = (read_data_1 > (ALUSrc ? sign_extended_data : read_data_2));
+                result = {31'h0000_0000, (read_data_1 > (ALUSrc ? sign_extended_data : read_data_2))};
                 zero_s = 1'b0;
                 block_s = 1'b0;
             end
             // both two data's sign-bit are 1
             else if (read_data_1[31] == 1'b1 && (ALUSrc ? sign_extended_data[31] : read_data_2[31]) == 1'b0) begin
-                result = 32'b0;
+                result = 32'h0000_0000;
                 zero_s = 1'b0;
                 block_s = 1'b0;
             end
             // data1's sign-bit is 1 and data2's sign-bit is 0
             else if (read_data_1[31] == 1'b0 && (ALUSrc ? sign_extended_data[31] : read_data_2[31]) == 1'b1) begin
-                result = 32'b1;
+                result = 32'h0000_0001;
                 zero_s = 1'b0;
                 block_s = 1'b0;
             end
             // data1's sign-bit is 0 and data2's sign-bit is 1
             else begin
-                result = (read_data_1 < (ALUSrc ? sign_extended_data : read_data_2));
+                result = {31'h0000_0000, (read_data_1 < (ALUSrc ? sign_extended_data : read_data_2))};
                 zero_s = 1'b0;
                 block_s = 1'b0;
             end
@@ -154,7 +154,7 @@ begin
             // if bne instruction is true, then we need to return the next address.
         end
         4'hf: begin // lui
-            result = {(ALUSrc ? sign_extended_data[15:0] : read_data_2[15:0]),16'b0};
+            result = {(ALUSrc ? sign_extended_data[15:0] : read_data_2[15:0]),16'h0000};
             zero_s = 1'b0;
             block_s = 1'b0;
         end

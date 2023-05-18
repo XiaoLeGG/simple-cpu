@@ -23,14 +23,14 @@
 	
 	case0:  addi $v0, $zero, 1
 		addi $zero, $zero, 12345
-		
 		addi $v0, $zero, 3 # show case1
 		addi $zero, $zero, 12345
-		
 		add $s0, $a0, $zero
-		addi $s1, $s0, -1
+		addi $s0, $s0, -1
+		and $a0, $a0, $s0
+		slt $a0, $zero, $a0
+		nor $a0, $zero, $a0
 		addi $v0, $zero, 4 # result led
-		and $a0, $s0, $s1
 		addi $zero, $zero, 12345
 		j While
 		
@@ -42,12 +42,8 @@
 		
 		add $s0, $a0, $zero
 		addi $s1, $zero, 1
-		and $s2, $s1, $s0
-		add $a0, $zero, $zero
-		beq $s2, $zero, out1
-		addi $a0, $zero, 1
-		
-	out1:	addi $v0, $zero, 4 # result led
+		and $a0, $s1, $s0
+		addi $v0, $zero, 4 # result led
 		addi $zero, $zero, 12345
 		j While
 		
