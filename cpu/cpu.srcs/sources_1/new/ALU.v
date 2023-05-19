@@ -49,7 +49,7 @@ begin
         end
         4'h2: begin // sra, srav
             // result = (read_data_1 >>> (ALUSrc ? sign_extended_data[10:6] : read_data_2));
-            result = (ALUSrc ? (read_data_2 >>> sign_extended_data[10:6]) : (read_data_1 >>> read_data_2));
+            result = (ALUSrc ? (($signed(read_data_2)) >>> sign_extended_data[10:6]) : (($signed(read_data_1)) >>> read_data_2));
             zero_s = 1'b0;
             block_s = 1'b0;
         end
@@ -67,7 +67,8 @@ begin
             block_s = 1'b0;
         end
         4'h5: begin // sub
-            result = read_data_1 - (ALUSrc ? sign_extended_data : read_data_2);
+//            result = read_data_1 - (ALUSrc ? sign_extended_data : read_data_2);
+                result = $signed(read_data_1) - $signed(ALUSrc ? sign_extended_data : read_data_2);
             zero_s = 1'b0;
             block_s = 1'b0;
             // throw error(maybe)

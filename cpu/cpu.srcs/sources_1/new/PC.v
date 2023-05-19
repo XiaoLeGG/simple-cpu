@@ -23,14 +23,15 @@
 module PC(
     input rst,
     input clk,
-    input [1:0]branch_s, // branch type
+    input [1:0] branch_s, // branch type
     input zero_s, // no need to jump; 1: need to jump (bne || beq)
     input block_s, // block signal for IO
     input block_ins, // block signal for instruction
     input confirm_button,
-    input [25:0]jump_address26, // address get from instruction j || jal
-    input [31:0]jump_address32, // address get from jr || beq || bne
-    output reg [31:0]address_o // output address
+    input [25:0] jump_address26, // address get from instruction j || jal
+    input [31:0] jump_address32, // address get from jr || beq || bne
+    output reg [31:0] address_o, // output address
+    output reg [31:0] pre_address_o // output pre address
 );
 
 reg [31:0] PC_reg = 32'h0000_0000;
@@ -87,6 +88,7 @@ begin
     if (~rst) begin
         address_o = 32'h0000_0000;
         PC_reg = 32'h0000_0000;
+        pre_address_o = 32'h0000_0000;
         confirm_value = 32'h0000_0000;
     end
     else begin
