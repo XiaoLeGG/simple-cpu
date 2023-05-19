@@ -92,7 +92,14 @@ While:  addi $v0, $zero, 0
 # s0: store the value of a
 # s2: store the sum from 1 to a
 # s3: used during adding loop
-case0:addi $v0, $zero, 0
+case0:
+	addi $v0, $zero, 2
+	addi $a0, $zero, 0
+	addi $zero, $zero, 12345
+	addi $v0, $zero, 4
+	addi $zero, $zero, 12345
+
+	addi $v0, $zero, 0
 	addi $zero, $zero, 12345
 
 	add $s0, $a0, $zero
@@ -124,7 +131,14 @@ break0:	addi $v0, $zero, 4 # show a < 0
 # s2: the add sum
 # s3: now number
 # s7: case type
-case1:	addi $v0, $zero, 1
+case1:
+	addi $v0, $zero, 2
+	addi $a0, $zero, 0
+	addi $zero, $zero, 12345
+	addi $v0, $zero, 4
+	addi $zero, $zero, 12345
+
+	addi $v0, $zero, 1
 	addi $zero, $zero, 12345
 	
 	add $s0, $a0, $zero
@@ -145,7 +159,14 @@ case1:	addi $v0, $zero, 1
 # s2: the add sum
 # s3: now number
 # s7: case type
-case2:	addi $v0, $zero, 1
+case2:
+	addi $v0, $zero, 2
+	addi $a0, $zero, 0
+	addi $zero, $zero, 12345
+	addi $v0, $zero, 4
+	addi $zero, $zero, 12345
+
+	addi $v0, $zero, 1
 	addi $zero, $zero, 12345
 	
 	addi $s7, $zero, 2
@@ -162,7 +183,14 @@ case2:	addi $v0, $zero, 1
 # s2: the add sum
 # s3: now number
 # s7: case type
-case3:	addi $v0, $zero, 1
+case3:
+	addi $v0, $zero, 2
+	addi $a0, $zero, 0
+	addi $zero, $zero, 12345
+	addi $v0, $zero, 4
+	addi $zero, $zero, 12345
+
+	addi $v0, $zero, 1
 	addi $zero, $zero, 12345
 	
 	addi $s7, $zero, 3
@@ -179,7 +207,14 @@ case3:	addi $v0, $zero, 1
 # s1: b
 # s2: a + b
 # s3: higher 24 bits of (a + b)
-case4:	addi $v0, $zero, 0 # get a
+case4:
+	addi $v0, $zero, 2
+	addi $a0, $zero, 0
+	addi $zero, $zero, 12345
+	addi $v0, $zero, 4
+	addi $zero, $zero, 12345
+
+	addi $v0, $zero, 0 # get a
 	addi $zero, $zero, 12345
 	add $s0, $a0, $zero
 	
@@ -200,12 +235,13 @@ case4:	addi $v0, $zero, 0 # get a
 	xor $s7, $s3, $s4
 	and $s6, $s6, $s7
 	
+	add $a0, $zero, $zero
 	beq $s6, $zero, noov4 # check whether overflow
-		addi $v0, $zero, 4 # overflow
 		addi $a0, $zero, 1
-		addi $zero, $zero, 12345
+noov4:	addi $v0, $zero, 4 # overflow
+	addi $zero, $zero, 12345
 	
-noov4:	addi $v0, $zero, 2 # show a + b
+	addi $v0, $zero, 2 # show a + b
 	add $a0, $s2, $zero
 	addi $zero, $zero, 12345
 	
@@ -215,14 +251,20 @@ noov4:	addi $v0, $zero, 2 # show a + b
 # s1: b
 # s2: a - b
 # s3: higher 24 bits of (a - b)
-case5:	addi $v0, $zero, 0 # get a
+case5:
+	addi $v0, $zero, 2
+	addi $a0, $zero, 0
+	addi $zero, $zero, 12345
+	addi $v0, $zero, 4
+	addi $zero, $zero, 12345
+
+	addi $v0, $zero, 0 # get a
 	addi $zero, $zero, 12345
 	add $s0, $a0, $zero
 	
 	addi $v0, $zero, 0 # get b
 	addi $zero, $zero, 12345
 	add $s1, $a0, $zero
-	
 	sub $s2, $s0, $s1
 
 	sll $s2, $s2, 24
@@ -236,12 +278,13 @@ case5:	addi $v0, $zero, 0 # get a
 	xor $s7, $s5, $s3
 	and $s6, $s6, $s7
 	
+	add $a0, $zero, $zero
 	beq $s6, $zero, noov5 # check whether overflow
-		addi $v0, $zero, 4 # overflow
 		addi $a0, $zero, 1
-		addi $zero, $zero, 12345
+noov5:	addi $v0, $zero, 4 # overflow
+	addi $zero, $zero, 12345
 	
-noov5:	addi $v0, $zero, 2 # show a - b
+	addi $v0, $zero, 2 # show a - b
 	add $a0, $s2, $zero
 	addi $zero, $zero, 12345
 	
@@ -253,7 +296,14 @@ noov5:	addi $v0, $zero, 2 # show a - b
 # $s2: used to check whether a < 0 or b < 0, after that it is used to stand 1
 # $s3: used to record how many negative numbers
 # $s4: used to record the answer
-case6:	addi $v0, $zero, 0
+case6:
+	addi $v0, $zero, 2
+	addi $a0, $zero, 0
+	addi $zero, $zero, 12345
+	addi $v0, $zero, 4
+	addi $zero, $zero, 12345
+
+	addi $v0, $zero, 0
 	addi $zero, $zero, 12345
 	add $s0, $zero, $a0
 	
@@ -287,7 +337,14 @@ noneg6:	addi $v0, $zero, 2 # show a * b
 	
 	j While
 
-case7:	addi $v0, $zero, 0
+case7:
+	addi $v0, $zero, 2
+	addi $a0, $zero, 0
+	addi $zero, $zero, 12345
+	addi $v0, $zero, 4
+	addi $zero, $zero, 12345
+
+	addi $v0, $zero, 0
 	addi $zero, $zero, 12345
 	add $s0, $zero, $a0
 	
