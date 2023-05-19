@@ -42,23 +42,26 @@ module IDecoder(
     output reg [31:0] systemcall_argument_1,
     output reg [31:0] systemcall_argument_2
 );
-reg [31:0]register[0:31];
-reg [4:0]write_register;
-reg [31:0] pre_PC_addr = 32'b0;
-reg [31:0] now_PC_addr = 32'b0;
+reg [31:0] register[0:31];
+reg [4:0] write_register;
 
-always@(*)
+reg [31:0] pre_PC_addr;
+reg [31:0] next_PC_addr;
+
+always @(PC_address, rst) begin
+    if (~rst) begin
+        pre_PC_addr = 32'h0000_0000;
+        next_PC_addr = 32'h0000_0000;
+    end else begin
+        pre_PC_addr = next_PC_addr;
+        next_PC_addr = PC_address;
+    end
+end
+
+always @(*)
 begin
     systemcall_argument_1 = register[2];
     systemcall_argument_2 = register[4];
-    if (now_PC_addr != PC_address) begin
-        pre_PC_addr = now_PC_addr;
-        now_PC_addr = PC_address;
-    end
-    else begin
-        pre_PC_addr = pre_PC_addr;
-        now_PC_addr = now_PC_addr;
-    end
     
     if (Jr == 1'b1) begin // jr instruction read $ra
         read_data_1 = register[31];
