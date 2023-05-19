@@ -33,6 +33,7 @@ module IDecoder(
     input MemtoReg,
     input HwtoReg,
     input [31:0] PC_address,
+    input [31:0] pre_PC_address,
     input [31:0] alu_data,
     input [31:0] mem_data,
     input [31:0] hw_data,
@@ -45,19 +46,6 @@ module IDecoder(
 reg [31:0] register[0:31];
 reg [4:0] write_register;
 
-reg [31:0] pre_PC_addr;
-reg [31:0] next_PC_addr;
-
-always @(PC_address, rst) begin
-    if (~rst) begin
-        pre_PC_addr = 32'h0000_0000;
-        next_PC_addr = 32'h0000_0000;
-    end else begin
-        pre_PC_addr = next_PC_addr;
-        next_PC_addr = PC_address;
-    end
-end
-
 always @(*)
 begin
     systemcall_argument_1 = register[2];
@@ -68,7 +56,7 @@ begin
         read_data_2 = register[0];
     end
     else if (Jal == 1'b1) begin // jal instruction rewrite $ra
-        read_data_1 = pre_PC_addr;
+        read_data_1 = pre_PC_address;
         read_data_2 = 32'h0000_0004;
     end
     else begin

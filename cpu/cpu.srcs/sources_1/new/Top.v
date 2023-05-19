@@ -34,7 +34,6 @@ module Top(
     output wire[7:0] seg_out0,
     output wire[7:0] seg_out1
 );
-    
     wire clk23;
     wire [31:0] pc_output_address_o;
     wire [31:0] ifetch_instruction_o;
@@ -56,6 +55,7 @@ module Top(
     wire [31:0] alu_result;
     wire [31:0] dmemory_read_data;
     wire [31:0] sign_extend_data32;
+    wire [31:0] pc_pre_pc_address_o;
     
     wire [31:0] idecoder_systemcall_argument_1;
     wire [31:0] idecoder_systemcall_argument_2;
@@ -130,7 +130,8 @@ module Top(
         .confirm_button(confirm_button),
         .jump_address26(ifetch_instruction_o[25:0]),
         .jump_address32(alu_result),
-        .address_o(pc_output_address_o)
+        .address_o(pc_output_address_o),
+        .pre_address_o(pc_pre_pc_address_o)
     );
     
     wire ifetch_upg_wen_o;
@@ -181,6 +182,7 @@ module Top(
         .MemtoReg(controller_MemtoReg),
         .HwtoReg(controller_HwtoReg),
         .PC_address(pc_output_address_o),
+        .pre_PC_address(pc_pre_pc_address_o),
         .alu_data(alu_result),
         .mem_data(dmemory_read_data),
         .hw_data(hwassistant_read_data),

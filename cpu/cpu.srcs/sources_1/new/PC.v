@@ -101,6 +101,7 @@ begin
         end else begin
             confirm_value = confirm_value;
         end
+        pre_address_o = address_o;
         address_o = next_address;
         PC_reg = next_address;
     end

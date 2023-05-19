@@ -54,7 +54,7 @@ begin
             block_s = 1'b0;
         end
         4'h3: begin // add, addi, lw, sw, jr, jal
-            result = read_data_1 + (ALUSrc ? sign_extended_data : read_data_2);
+            result = $signed(read_data_1) + $signed(ALUSrc ? sign_extended_data : read_data_2);
             
             zero_s = 1'b0;
             

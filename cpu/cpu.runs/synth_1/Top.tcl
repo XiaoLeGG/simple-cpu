@@ -42,6 +42,7 @@ read_verilog -library xil_defaultlib {
   D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/new/IFetch.v
   D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/new/PC.v
   D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/new/Sign_Extend.v
+  D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/new/key_scan.v
   D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/new/light_7seg_ego1.v
   D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/new/light_control.v
   D:/csw/Desk/CS202/CPU/simple-cpu/cpu/cpu.srcs/sources_1/new/refresh_seg_led.v

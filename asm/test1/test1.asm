@@ -2,10 +2,6 @@
 	
 .text 0x0000
 start:
-	add $zero, $zero, $zero
-	addi $a0, $zero, 50
-	addi $v0, $zero, 3
-	addi $zero, $zero, 12345
 	addi $t0, $zero, 0
 	addi $t1, $zero, 1
 	addi $t2, $zero, 2
@@ -26,7 +22,14 @@ start:
 		beq $t7, $a0, case7
 		j While
 	
-	case0:  addi $v0, $zero, 1
+	case0:
+		addi $v0, $zero, 2
+		addi $a0, $zero, 0
+		addi $zero, $zero, 12345
+		addi $v0, $zero, 4
+		addi $zero, $zero, 12345
+
+		addi $v0, $zero, 1
 		addi $zero, $zero, 12345
 		addi $v0, $zero, 3 # show case1
 		addi $zero, $zero, 12345
@@ -41,7 +44,14 @@ start:
 		addi $zero, $zero, 12345
 		j While
 		
-	case1:	addi $v0, $zero, 1
+	case1:
+		addi $v0, $zero, 2
+		addi $a0, $zero, 0
+		addi $zero, $zero, 12345
+		addi $v0, $zero, 4
+		addi $zero, $zero, 12345
+
+		addi $v0, $zero, 1
 		addi $zero, $zero, 12345
 		
 		addi $v0, $zero, 3
@@ -54,53 +64,74 @@ start:
 		addi $zero, $zero, 12345
 		j While
 		
-	case2:	sll $s0, $s0, 24
-		sll $s1, $s1, 24
-		srl $s0, $s0, 24
-		srl $s1, $s1, 24
+	case2:
+		addi $v0, $zero, 2
+		addi $a0, $zero, 0
+		addi $zero, $zero, 12345
+		addi $v0, $zero, 4
+		addi $zero, $zero, 12345
+
 		
 		or $s2, $s0, $s1
 	
-		addi $v0, $zero, 2 # show in seg_led only
+		addi $v0, $zero, 3 # show in seg_led only
 		add $a0, $s2, $zero
 		addi $zero, $zero, 12345
 		j While
 		
-	case3:	sll $s0, $s0, 24
-		sll $s1, $s1, 24
-		srl $s0, $s0, 24
-		srl $s1, $s1, 24
+	case3:
+		addi $v0, $zero, 2
+		addi $a0, $zero, 0
+		addi $zero, $zero, 12345
+		addi $v0, $zero, 4
+		addi $zero, $zero, 12345
 		
 		nor $s2, $s0, $s1
 		
-		addi $v0, $zero, 2 # show in seg_led only
+		addi $v0, $zero, 3 # show in seg_led only
 		add $a0, $s2, $zero
 		addi $zero, $zero, 12345
 		j While
 		
-	case4:	sll $s0, $s0, 24
-		sll $s1, $s1, 24
-		srl $s0, $s0, 24
-		srl $s1, $s1, 24
+	case4:
+		addi $v0, $zero, 2
+		addi $a0, $zero, 0
+		addi $zero, $zero, 12345
+		addi $v0, $zero, 4
+		addi $zero, $zero, 12345
 		
 		xor $s2, $s0, $s1
 	
-		addi $v0, $zero, 2 # show in seg_led only(signed)
+		addi $v0, $zero, 3 # show in seg_led only(unsigned)
 		add $a0, $s2, $zero
 		addi $zero, $zero, 12345
 		j While
 		
-	case5:	slt $s2, $s0, $s1
+	case5:
+		addi $v0, $zero, 2
+		addi $a0, $zero, 0
+		addi $zero, $zero, 12345
+		addi $v0, $zero, 4
+		addi $zero, $zero, 12345
+
+		sll $s0, $s0, 24
+		sra $s0, $s0, 24
+		sll $s1, $s1, 24
+		sra $s1, $s1, 24
+
+		slt $s2, $s0, $s1
 	
 		addi $v0, $zero, 4 # result led
 		add $a0, $s2, $zero
 		addi $zero, $zero, 12345
 		j While
 		
-	case6:	sll $s0, $s0, 24
-		sll $s1, $s1, 24
-		srl $s0, $s0, 24
-		srl $s1, $s1, 24
+	case6:
+		addi $v0, $zero, 2
+		addi $a0, $zero, 0
+		addi $zero, $zero, 12345
+		addi $v0, $zero, 4
+		addi $zero, $zero, 12345
 		
 		sltu $s2, $s0, $s1
 	
@@ -109,17 +140,24 @@ start:
 		addi $zero, $zero, 12345
 		j While
 		
-	case7:	addi $v0, $zero, 0
+	case7:
+		addi $v0, $zero, 2
+		addi $a0, $zero, 0
+		addi $zero, $zero, 12345
+		addi $v0, $zero, 4
+		addi $zero, $zero, 12345
+
+		addi $v0, $zero, 1
 		addi $zero, $zero, 12345
 		add $s0, $a0, $zero
 		
-		addi $v0, $zero, 2
+		addi $v0, $zero, 3
 		addi $zero, $zero, 12345
 		
-		addi $v0, $zero, 0
+		addi $v0, $zero, 1
 		addi $zero, $zero, 12345
 		add $s1, $a0, $zero
 
-		addi $v0, $zero, 2
+		addi $v0, $zero, 3
 		addi $zero, $zero, 12345
 		j While

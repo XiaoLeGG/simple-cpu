@@ -33,8 +33,6 @@ recru:	addi $sp, $sp, -8
 	
 not2:	bne $s3, $s0, contin
 	add $s2, $s2, $s3
-	addi $sp, $sp, 8
-	addi $s1, $s1, 2 # pop stack for two times
 	
 	bne $s7, $t3, not3_1 # pop stack for case 3
 		addi $v0, $zero, 3
@@ -46,16 +44,17 @@ not2:	bne $s3, $s0, contin
 			jal second
 			bne $t8, $zero, sec2_2
 		lw $ra, 4($sp)
-not3_1:	jr $ra
+not3_1:	
+		addi $sp, $sp, 8
+		addi $s1, $s1, 2 # pop stack for two times
+		jr $ra
 	
 contin:	addi $s3, $s3, 1
 	jal recru
 	
 	lw $s3, 0($sp)
 	lw $ra, 4($sp)
-	addi $sp, $sp, 8
 	add $s2, $s2, $s3
-	addi $s1, $s1, 2 # pop stack for two times
 	
 	bne $s7, $t3, not3_2 # pop stack for case 3
 		addi $v0, $zero, 3
@@ -67,7 +66,11 @@ contin:	addi $s3, $s3, 1
 			jal second
 			bne $t8, $zero, sec2_3
 		lw $ra, 4($sp)
-not3_2:	jr $ra
+not3_2:	
+		addi $sp, $sp, 8
+		addi $s1, $s1, 2 # pop stack for two times
+		jr $ra
+
 main:	addi $t0, $zero, 0
 	addi $t1, $zero, 1
 	addi $t2, $zero, 2
@@ -372,10 +375,11 @@ loop7:	addi $s5, $s5, -1
 	bne $s7, $zero, noadd7
 		addi $s4, $s4, 1
 		bne $s5, $zero, loop7
+		j out7
 noadd7:	add $s0, $s0, $s1
 	bne $s5, $zero, loop7
 
-	addi $s5, $zero, 1
+out7:addi $s5, $zero, 1
 	bne $a0, $s5, notneg0
 		sub $s0, $zero, $s0
 notneg0:	bne $s3, $s5, notneg1
@@ -384,18 +388,18 @@ notneg1:	addi $v0, $zero, 2
 	add $a0, $zero, $s4
 	addi $zero, $zero, 12345
 	#5 seconds
-#	addi $s5, $zero, 5
-#sec5_1:	addi $s5, $s5, -1
-#	jal second
-#	bne $s5, $zero, sec5_1
+	addi $s5, $zero, 5
+sec5_1:	addi $s5, $s5, -1
+	jal second
+	bne $s5, $zero, sec5_1
 	
 	add $a0, $zero, $s0
 	addi $zero, $zero, 12345
 	#5 seconds
-#	addi $s5, $zero, 5
-#sec5_2:	addi $s5, $s5, -1
-#	jal second
-#	bne $s5, $zero, sec5_2
+	addi $s5, $zero, 5
+sec5_2:	addi $s5, $s5, -1
+	jal second
+	bne $s5, $zero, sec5_2
 	
 	j While
 
