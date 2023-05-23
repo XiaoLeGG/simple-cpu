@@ -2,7 +2,7 @@
 	
 .text	0x0000
 start: j main
-second:	addi $t9, $zero, 3
+second:	addi $t9, $zero, 1
 	sll $t9, $t9, 23
 	
 loop_s:	addi $t9, $t9, -1
@@ -314,9 +314,10 @@ case6:
 	addi $zero, $zero, 12345
 	add $s1, $zero, $a0
 	
+	add $s3, $zero, $zero
 	slt $s2, $s0, $zero # check whether a is negative
 	beq $s2, $zero, no6_0
-		addi $s3, $zero, 1
+		addi $s3, $s3, 1
 		sub $s0, $zero, $s0
 no6_0:	slt $s2, $s1, $zero  # check whether a is negative
 	beq $s2, $zero, no6_1
@@ -355,10 +356,11 @@ case7:
 	addi $zero, $zero, 12345
 	add $s1, $zero, $a0
 	
+	add $s3, $zero, $zero
 	slt $s2, $s0, $zero # check whether a is negative
 	add $a0, $s2, $zero
 	beq $s2, $zero, no7_0
-		addi $s3, $zero, 1
+		addi $s3, $s3, 1
 		sub $s0, $zero, $s0
 no7_0:	slt $s2, $s1, $zero  # check whether a is negative
 	beq $s2, $zero, no7_1

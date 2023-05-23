@@ -32,7 +32,8 @@ module Top(
     output negative_led,
     output wire[7:0] seg_en,
     output wire[7:0] seg_out0,
-    output wire[7:0] seg_out1
+    output wire[7:0] seg_out1,
+    output wire[7:0] answer_show_led
 );
     wire clk23;
     wire [31:0] pc_output_address_o;
@@ -56,6 +57,7 @@ module Top(
     wire [31:0] dmemory_read_data;
     wire [31:0] sign_extend_data32;
     wire [31:0] pc_pre_pc_address_o;
+    wire confirm_signal;
     
     wire [31:0] idecoder_systemcall_argument_1;
     wire [31:0] idecoder_systemcall_argument_2;
@@ -116,7 +118,8 @@ module Top(
         .seg_out1(seg_out1),
         .result_led(result_led),
         .negative_led(negative_led),
-        .read_data(hwassistant_read_data)
+        .read_data(hwassistant_read_data),
+        .answer_show_led(answer_show_led)
     );
     
     
@@ -127,7 +130,7 @@ module Top(
         .zero_s(alu_zero_s),
         .block_ins(controller_block_ins),
         .block_s(block_s),
-        .confirm_button(confirm_button),
+        .confirm_button(confirm_signal),
         .jump_address26(ifetch_instruction_o[25:0]),
         .jump_address32(alu_result),
         .address_o(pc_output_address_o),
@@ -225,6 +228,12 @@ module Top(
     Sign_Extend sign_extend(
         .ins15_0(ifetch_instruction_o[15:0]),
         .data32(sign_extend_data32)
+    );
+    
+    key_scan ks(
+    .clk(raw_clock),
+    .key(confirm_button),
+    .key_o(confirm_signal)
     );
     
 endmodule
