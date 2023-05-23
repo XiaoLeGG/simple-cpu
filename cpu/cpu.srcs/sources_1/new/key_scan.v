@@ -22,42 +22,44 @@
 
 module key_scan(
     input clk,
-    input rst_n,
     input key,
-    output flag
-    );
-parameter cnt_1MS = 23000;
+    output reg key_o
+    ); 
+reg [31:0] cnt_press;
+reg [31:0] cnt_release;
 
-reg key_n;
-reg key_r;
-reg [31:0] cnt;
+parameter cnt_check = 100000;
 
-always@(posedge clk or negedge rst_n) begin
-    if (!rst_n) begin
-        cnt <= 32'b0;
-    end
-    else if (cnt == cnt_1MS) begin
-        cnt <= 1'b0;
+always@(posedge clk) begin
+    if(key == 1'b1) begin
+        if (cnt_press <= cnt_check) begin
+            cnt_press <= cnt_press + 32'b1;
+        end else begin
+            cnt_press <= cnt_press;
+        end
+        cnt_release <= 32'b0;
     end
     else begin
-        cnt <= cnt + 1'b1;
+        if (cnt_release <= cnt_check) begin
+            cnt_release <= cnt_release + 32'b1;
+        end else begin
+            cnt_release <= cnt_release;
+        end
+        cnt_press <= 32'b0;
     end
 end
 
-always@(posedge clk or negedge rst_n) begin
-    if (!rst_n) begin
-        key_n <= 1'b1;
-        key_r <= 1'b1;
-    end
-    else if (cnt == cnt_1MS) begin
-        key_n <= key;
-        key_r <= key_n;
+always @(posedge clk) begin
+    if (cnt_press >= cnt_check) begin
+        key_o <= 1'b1;
     end
     else begin
-        key_n <= key_n;
-        key_r <= key_r;
+        if (cnt_release >= cnt_check) begin
+            key_o <= 1'b0;
+        end else begin
+            key_o <= key_o;
+        end
     end
 end
-assign flag = ~key_n & key_r;
 
 endmodule

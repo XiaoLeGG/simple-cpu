@@ -87,6 +87,9 @@ start:
 		addi $zero, $zero, 12345
 		
 		nor $s2, $s0, $s1
+
+		sll $s2, $s2, 24
+		srl $s2, $s2, 24
 		
 		addi $v0, $zero, 3 # show in seg_led only
 		add $a0, $s2, $zero

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Fri May 19 20:22:24 2023
+| Date         : Sun May 21 21:57:23 2023
 | Host         : LAPTOP-IFRFTT91 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file Top_timing_summary_routed.rpt -rpx Top_timing_summary_routed.rpx -warn_on_violation
 | Design       : Top
@@ -54,307 +54,305 @@ Table of Contents
 --------------------
  There are 34 register/latch pins with no clock driven by root clock pin: hard_ware_rst (HIGH)
 
- There are 1392 register/latch pins with no clock driven by root clock pin: raw_clock (HIGH)
+ There are 1423 register/latch pins with no clock driven by root clock pin: raw_clock (HIGH)
 
  There are 3 register/latch pins with no clock driven by root clock pin: hwass/rsl/clkout_reg/Q (HIGH)
 
  There are 2 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][0]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][10]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][10]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][11]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][11]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][12]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][12]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][13]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][13]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][14]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][14]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][15]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][15]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][16]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][16]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][17]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][17]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][18]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][18]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][19]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][19]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][1]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][1]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][20]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][20]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][21]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][21]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][22]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][22]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][23]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][23]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][24]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][24]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][25]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][25]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][26]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][26]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][27]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][27]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][28]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][28]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][29]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][29]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][2]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][2]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][30]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][30]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][31]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][31]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][3]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][3]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][4]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][4]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][5]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][5]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][6]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][6]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][7]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][7]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][8]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][8]/Q (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][9]/Q (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: idecoder/register_reg[2][9]/Q (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]/Q (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]/Q (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[1]/Q (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[1]/Q (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[0] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[0] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
 
- There are 50 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
+ There are 57 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[1] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[2] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[3] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[4] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[5] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[6] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[7] (HIGH)
 
- There are 44 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
+ There are 51 register/latch pins with no clock driven by root clock pin: ifetch/ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOPADOP[0] (HIGH)
 
- There are 32 register/latch pins with no clock driven by root clock pin: ks/key_n_reg/Q (HIGH)
-
- There are 32 register/latch pins with no clock driven by root clock pin: ks/key_r_reg/Q (HIGH)
+ There are 32 register/latch pins with no clock driven by root clock pin: ks/key_o_reg/Q (HIGH)
 
  There are 34 register/latch pins with no clock driven by root clock pin: uart/inst/upg_inst/disp_reg[0]/Q (HIGH)
 
@@ -389,7 +387,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 5262 pins that are not constrained for maximum delay. (HIGH)
+ There are 5400 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -403,7 +401,7 @@ Table of Contents
 
 6. checking no_output_delay
 ---------------------------
- There are 28 ports with no output delay specified. (HIGH)
+ There are 36 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 

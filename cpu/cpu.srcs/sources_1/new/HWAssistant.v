@@ -32,7 +32,8 @@ module HWAssistant(
     output [7:0] seg_out1,
     output result_led,
     output reg negative_led,
-    output reg [31:0] read_data
+    output reg [31:0] read_data,
+    output reg [7:0] answer_show_led
     );
     
     reg [31:0] display_number;
@@ -58,6 +59,7 @@ module HWAssistant(
         if (~rst) begin
             read_data = 32'h0000_0000;
             display_number = 32'h0000_0000;
+            answer_show_led = 8'b0000_0000;
             led_type = 2'b00;
             negative_led = 1'b0;
         end else begin
@@ -72,15 +74,18 @@ module HWAssistant(
                 32'h0000_0002: begin
                     if (systemcall_argument_2[31:31] == 1'b1) begin
                         display_number = ~(systemcall_argument_2 - 1'b1);
+                        answer_show_led = systemcall_argument_2[7:0];
                         negative_led = 1'b1;
                     end
                     else begin
                         display_number = systemcall_argument_2;
+                        answer_show_led = systemcall_argument_2[7:0];
                         negative_led = 1'b0;
                     end
                 end
                 32'h0000_0003: begin // unsigned number
                     display_number = systemcall_argument_2;
+                    answer_show_led = systemcall_argument_2[7:0];
                     negative_led = 1'b0;
                 end
                 32'h0000_0004: begin
